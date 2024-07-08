@@ -178,21 +178,24 @@
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="comment-container"></div>
-<link rel="stylesheet" href="https://jjeejj.github.io/css/gitment.css">
-<script src="https://www.wenjunjiang.win/js/gitment.js"></script>
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 <script>
-	var gitment = new Gitment({
-		id: 'friends/index.html',
-		owner: 'yiyanliao',
-		repo: 'yiyanliao.github.io',
-		oauth: {
-			client_id: 'Ov23ctz6AfPDO8XTj9T5',
-			client_secret: '33e7efe632fc350372076a63f30e66b3301d8127',
-		},
-	})
-	gitment.render('comment-container')
+    new Valine({
+        el: '#valine-thread',
+        appId: 'Gexq5jRGUFhCSJW31zIAqHXb-gzGzoHsz',
+        appKey: 'QzsK9AspFPLsZLeDZnyUTxB4',
+        notify: false,
+        verify: false,
+        avatar: '',
+        placeholder: 'Say something...',
+        meta: ['nick', 'mail'],
+        visitor: true,
+        lang: ''
+    })
 </script>
+
 
 </div>
 
