@@ -3,7 +3,7 @@ favicon: /img/favicon.png
 avatar: /img/avatar.jpg
 # if author sets in hexo_config, this string doesn't work
 author: Yiyan Liao
-author_bio: 'Your biography can be writed down here.'
+author_bio: Be a rational poet.
 
 since: 2025
 
@@ -41,8 +41,8 @@ social_links:
 e_social:
   enable: true
 e_social_links:
-  Google Scholar: / || fas fa-graduation-cap
-  ORCID: / || fab fa-orcid
+  Google Scholar: https://scholar.google.com/citations?user=9DUJUoQAAAAJ&hl=en || fas fa-graduation-cap
+  ORCID: https://orcid.org/my-orcid?orcid=0009-0000-5594-7013 || fab fa-orcid
 
 # CV download link
 cv_dl:
