@@ -3,6 +3,25 @@ title: Publications
 date: 2025-05-06 17:36:01
 ---
 
+### Computer-Aided Drug Design (CADD)
+
+---
+
+#### [**Comparative assessment of co-folding methods for molecular glue ternary structure prediction**](https://www.biorxiv.org/content/10.1101/2025.05.25.655997v1)
+*bioRxiv*, May 28, 2025
+
+**Yiyan Liao**, Jintao Zhu, Juan Xie, Luhua Lai, Jianfeng Pei
+
+<div align="center">
+  <img 
+    src="https://raw.githubusercontent.com/yiyanliao/yiyanliao.github.io/main/themes/Academia/source/img/MGBench.png" 
+    alt="Comparative assessment of co-folding methods" 
+    width="800" 
+    style="border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.15);" />
+</div>
+
+---
+
 ### Large Language Models (LLMs)
 
 ---
