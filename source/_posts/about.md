@@ -22,7 +22,8 @@ School of Life Sciences, Peking University
 ---
 
 ## 🏅 Academic Achievements
-
+- **33th Peking University ＂Challenge Cup＂ Interdisciplinary Student Extracurricular Academic Science and Technology Works Competition**
+  Excellence Award (Team Leader), *May 2025*
 - **International Genetically Engineered Machine (iGEM) 2024**  
   Gold Medal – Team Peking (Wet Lab Leader), *Oct 2024*
 - **Peking University First Prize Scholarship for Freshmen**
