@@ -16,7 +16,7 @@ date: 2025-05-06 17:36:01
   <img 
     src="https://raw.githubusercontent.com/yiyanliao/yiyanliao.github.io/main/themes/Academia/source/img/MGBench.png" 
     alt="Comparative assessment of co-folding methods" 
-    width="800" 
+    width="600" 
     style="border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.15);" />
 </div>
 
@@ -33,9 +33,9 @@ Junting Zhou, Tingjia Miao, **Yiyan Liao**, Qichao Wang, Zhoufutu Wen, Yanqin Wa
 
 <div align="center">
   <img 
-    src="https://raw.githubusercontent.com/yiyanliao/yiyanliao.github.io/main/themes/Academia/source/img/SciDA.pdf" 
+    src="https://raw.githubusercontent.com/yiyanliao/yiyanliao.github.io/main/themes/Academia/source/img/SciDA.png" 
     alt="SciDA: Scientific Dynamic Assessor" 
-    width="800" 
+    width="600" 
     style="border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.15);" />
 </div>
 
