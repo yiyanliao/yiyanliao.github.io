@@ -26,6 +26,19 @@ date: 2025-05-06 17:36:01
 
 ---
 
+#### [**SciDA: Scientific Dynamic Assessor of LLMs**](https://arxiv.org/abs/2506.12909)
+*arXiv*, Jun 15, 2025
+
+Junting Zhou, Tingjia Miao, **Yiyan Liao**, Qichao Wang, Zhoufutu Wen, Yanqin Wang, Yunjie Huang, Ge Yan, Leqi Wang, Yucheng Xia, Hongwan Gao, Yuansong Zeng, Renjie Zheng, Chen Dun, Yitao Liang, Tong Yang, Wenhao Huang, Ge Zhang
+
+<div align="center">
+  <img 
+    src="https://raw.githubusercontent.com/yiyanliao/yiyanliao.github.io/main/themes/Academia/source/img/SciDA.pdf" 
+    alt="SciDA: Scientific Dynamic Assessor" 
+    width="800" 
+    style="border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.15);" />
+</div>
+
 #### [**SuperGPQA: Scaling LLM Evaluation across 285 Graduate Disciplines**](https://arxiv.org/abs/2502.14739)
 *arXiv*, Feb 20, 2025
 
