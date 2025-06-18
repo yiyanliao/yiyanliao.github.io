@@ -58,6 +58,31 @@ date: 2025-05-06 17:36:01
 <table>
   <tr>
     <td style="width: 200px; padding-right: 20px; border: none; vertical-align: top;">
+      <img src="https://raw.githubusercontent.com/yiyanliao/yiyanliao.github.io/main/themes/Academia/source/img/AcademicBrowse.png" alt="AcademicBrowse: Benchmarking Academic Browse" class="publication-image" style="width:100%; border-radius:8px;">
+    </td>
+    <td style="vertical-align: top; border: none;">
+      <a href="https://arxiv.org/abs/2506.13784" style="text-decoration: none; color: inherit;">
+        <strong style="font-size: 1.1em;">AcademicBrowse: Benchmarking Academic Browse Ability of LLMs</strong>
+      </a>
+      <p class="publication-authors">
+        <span class="author-toggle-container">
+          <span class="authors-short">Junting Zhou, Wang Li, <strong>Yiyan Liao</strong>, ..., Yuhan Wu, Tong Yang</span>
+          <span class="authors-full" style="display: none;">Junting Zhou, Wang Li, <strong>Yiyan Liao</strong>, Nengyuan Zhang, Tingjia Miao, Zhihui Qi, Yuhan Wu, Tong Yang</span>
+          <span class="toggle-authors">[Show All]</span>
+        </span>
+      </p>
+      <em>arXiv</em>, Jun 2025
+      <br>
+      [ <a href="https://arxiv.org/abs/2506.13784">Paper</a> ]
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <td style="width: 200px; padding-right: 20px; border: none; vertical-align: top;">
       <img src="https://raw.githubusercontent.com/yiyanliao/yiyanliao.github.io/main/themes/Academia/source/img/SciDA.png" alt="SciDA: Scientific Dynamic Assessor" class="publication-image" style="width:100%; border-radius:8px;">
     </td>
     <td style="vertical-align: top; border: none;">
@@ -66,7 +91,7 @@ date: 2025-05-06 17:36:01
       </a>
       <p class="publication-authors">
         <span class="author-toggle-container">
-          <span class="authors-short">Junting Zhou, Tingjia Miao, <strong>Yiyan Liao</strong>, Qichao Wang, Zhoufutu Wen, ...</span>
+          <span class="authors-short">Junting Zhou, Tingjia Miao, <strong>Yiyan Liao</strong>, ..., Yitao Liang, Tong Yang, Wenhao Huang, Ge Zhang</span>
           <span class="authors-full" style="display: none;">Junting Zhou, Tingjia Miao, <strong>Yiyan Liao</strong>, Qichao Wang, Zhoufutu Wen, Yanqin Wang, Yunjie Huang, Ge Yan, Leqi Wang, Yucheng Xia, Hongwan Gao, Yuansong Zeng, Renjie Zheng, Chen Dun, Yitao Liang, Tong Yang, Wenhao Huang, Ge Zhang</span>
           <span class="toggle-authors">[Show All]</span>
         </span>
@@ -91,7 +116,7 @@ date: 2025-05-06 17:36:01
       </a>
       <p class="publication-authors">
         <span class="author-toggle-container">
-          <span class="authors-short">M-A-P Team, Xinrun Du, Yifan Yao, Kaijing Ma, Bingli Wang, Tianyu Zheng, ..., <strong>Yiyan Liao</strong>, ...</span>
+          <span class="authors-short">M-A-P Team, Xinrun Du, Yifan Yao, Kaijing Ma, ..., <strong>Yiyan Liao</strong>, ..., Jiaheng Liu, Qunshu Lin, Wenhao Huang, Ge Zhang</span>
           <span class="authors-full" style="display: none;">M-A-P Team, Xinrun Du, Yifan Yao, Kaijing Ma, Bingli Wang, Tianyu Zheng, King Zhu, Minghao Liu, Yiming Liang, Xiaolong Jin, Zhenlin Wei, Chujie Zheng, Kaixin Deng, Shawn Gavin, Shian Jia, Sichao Jiang, <strong>Yiyan Liao</strong>, Rui Li, Qinrui Li, Sirun Li, Yizhi Li, Yunwen Li, David Ma, Yuansheng Ni, Haoran Que, Qiyao Wang, Zhoufutu Wen, Siwei Wu, Tyshawn Hsing, Ming Xu, Zhenzhu Yang, Zekun Moore Wang, Junting Zhou, Yuelin Bai, Xingyuan Bu, Chenglin Cai, Liang Chen, Yifan Chen, Chengtuo Cheng, Tianhao Cheng, Keyi Ding, Siming Huang, Yun Huang, Yaoru Li, Yizhe Li, Zhaoqun Li, Tianhao Liang, Chengdong Lin, Hongquan Lin, Yinghao Ma, Tianyang Pang, Zhongyuan Peng, Zifan Peng, Qige Qi, Shi Qiu, Xingwei Qu, Shanghaoran Quan, Yizhou Tan, Zili Wang, Chenqing Wang, Hao Wang, Yiya Wang, Yubo Wang, Jiajun Xu, Kexin Yang, Ruibin Yuan, Yuanhao Yue, Tianyang Zhan, Chun Zhang, Jinyang Zhang, Xiyue Zhang, Xingjian Zhang, Yue Zhang, Yongchi Zhao, Xiangyu Zheng, Chenghua Zhong, Yang Gao, Zhoujun Li, Dayiheng Liu, Qian Liu, Tianyu Liu, Shiwen Ni, Junran Peng, Yujia Qin, Wenbo Su, Guoyin Wang, Shi Wang, Jian Yang, Min Yang, Meng Cao, Xiang Yue, Zhaoxiang Zhang, Wangchunshu Zhou, Jiaheng Liu, Qunshu Lin, Wenhao Huang, Ge Zhang</span>
           <span class="toggle-authors">[Show All]</span>
         </span>
