@@ -58,11 +58,11 @@ date: 2025-05-06 17:36:01
 <table>
   <tr>
     <td style="width: 200px; padding-right: 20px; border: none; vertical-align: top;">
-      <img src="https://raw.githubusercontent.com/yiyanliao/yiyanliao.github.io/main/themes/Academia/source/img/AcademicBrowse.png" alt="AcademicBrowse: Benchmarking Academic Browse" class="publication-image" style="width:100%; border-radius:8px;">
+      <img src="https://raw.githubusercontent.com/yiyanliao/yiyanliao.github.io/main/themes/Academia/source/img/ScholarSearch.png" alt="ScholarSearch: Benchmarking Scholar" class="publication-image" style="width:100%; border-radius:8px;">
     </td>
     <td style="vertical-align: top; border: none;">
       <a href="https://arxiv.org/abs/2506.13784" style="text-decoration: none; color: inherit;">
-        <strong style="font-size: 1.1em;">AcademicBrowse: Benchmarking Academic Browse Ability of LLMs</strong>
+        <strong style="font-size: 1.1em;">ScholarSearch: Benchmarking Scholar Searching Ability of LLMs</strong>
       </a>
       <p class="publication-authors">
         <span class="author-toggle-container">
