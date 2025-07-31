@@ -77,7 +77,6 @@ date: 2025-05-06 17:36:01
     </td>
   </tr>
 </table>
-
 <br>
 
 <table>
@@ -134,22 +133,22 @@ date: 2025-05-06 17:36:01
   // Add a single event listener to the document body.
   // This will catch clicks on any element, including ones added later.
   document.body.addEventListener('click', function(event) {
-    
+
     // Check if the element that was clicked is a toggle button.
     if (event.target.matches('.toggle-authors')) {
       const button = event.target;
       const container = button.parentElement;
       const shortList = container.querySelector('.authors-short');
       const fullList = container.querySelector('.authors-full');
-
+    
       // If either list is not found, do nothing.
       if (!shortList || !fullList) {
         return;
       }
-
+    
       // Check the current state.
       const isExpanded = fullList.style.display === 'inline';
-
+    
       if (isExpanded) {
         // Collapse the list
         fullList.style.display = 'none';

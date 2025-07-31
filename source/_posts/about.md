@@ -22,6 +22,8 @@ School of Life Sciences, Peking University
 ---
 
 ## 🏅 Academic Achievements
+- **2025 Beijing Natural Science Foundation Undergraduate Research Program**
+  Development and Validation of Deep Learning-Based Virtual Screening Methods for Molecular Glues, *Jul 2025*
 - **33th Peking University "Challenge Cup" Interdisciplinary Student Extracurricular Academic Science and Technology Works Competition**
   Excellence Award (Team Leader), *May 2025*
 - **International Genetically Engineered Machine (iGEM) 2024**  
@@ -49,8 +51,11 @@ School of Life Sciences, Peking University
 ## 💼 Internships
 
 - **Moonshot AI**  
-  *Reinforcement Learning Intern*, Feb 2025 – Present  
+  *Reinforcement Learning Intern*, Feb 2025 – Jun 2025  
   [moonshot.cn](https://www.moonshot.cn)
+
+- **Tencent**
+  Biological Large Language Models (LLMs), Jun 2025 - Present
 
 ---
 
