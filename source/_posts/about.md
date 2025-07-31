@@ -53,7 +53,6 @@ School of Life Sciences, Peking University
 - **Moonshot AI**  
   *Reinforcement Learning Intern*, Feb 2025 – Jun 2025  
   [moonshot.cn](https://www.moonshot.cn)
-
 - **Tencent**
   Biological Large Language Models (LLMs), Jun 2025 - Present
 
