@@ -120,7 +120,7 @@ date: 2025-05-06 17:36:01
           <span class="toggle-authors">[Show All]</span>
         </span>
       </p>
-      <em>arXiv</em>, Feb 2025
+      <em>NeurIPS</em>, Feb 2025
       <br>
       [ <a href="https://arxiv.org/abs/2502.14739">Paper</a> ]
     </td>
