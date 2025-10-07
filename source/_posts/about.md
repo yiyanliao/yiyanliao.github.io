@@ -17,7 +17,7 @@ School of Life Sciences, Peking University
 ## 🧬 Education
 
 - **Peking University**, School of Life Sciences  
-  *B.S. in Bioinformatics* (2023 – Present)
+  *B.Tech. in Bioinformatics* (2023 – Present)
 
 ---
 

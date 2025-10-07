@@ -34,18 +34,18 @@ date: 2025-05-06 17:36:01
 <table>
   <tr>
     <td style="width: 200px; padding-right: 20px; border: none; vertical-align: top;">
-      <img src="https://raw.githubusercontent.com/yiyanliao/yiyanliao.github.io/main/themes/Academia/source/img/MGBench.png" alt="Comparative assessment of co-folding methods" class="publication-image" style="width:100%; border-radius:8px;">
+      <img src="https://raw.githubusercontent.com/yiyanliao/yiyanliao.github.io/main/themes/Academia/source/img/MGBench.png" alt="Benchmarking Cofolding Methods for Molecular Glue Ternary Structure Prediction" class="publication-image" style="width:100%; border-radius:8px;">
     </td>
     <td style="vertical-align: top; border: none;">
-      <a href="https://www.biorxiv.org/content/10.1101/2025.05.25.655997v1" style="text-decoration: none; color: inherit;">
-        <strong style="font-size: 1.1em;">Comparative assessment of co-folding methods for molecular glue ternary structure prediction</strong>
+      <a href=" https://doi.org/10.1021/acs.jcim.5c01860" style="text-decoration: none; color: inherit;">
+        <strong style="font-size: 1.1em;">Benchmarking Cofolding Methods for Molecular Glue Ternary Structure Prediction</strong>
       </a>
       <p class="publication-authors">
         <strong>Yiyan Liao</strong>, Jintao Zhu, Juan Xie, Luhua Lai, Jianfeng Pei
       </p>
-      <em>bioRxiv</em>, May 2025
+      <em>Journal of Chemical Information and Modeling</em>, 2025
       <br>
-      [ <a href="https://www.biorxiv.org/content/10.1101/2025.05.25.655997v1">Paper</a> ]
+      [ <a href=" https://doi.org/10.1021/acs.jcim.5c01860">Paper</a> ]
     </td>
   </tr>
 </table>
@@ -71,7 +71,7 @@ date: 2025-05-06 17:36:01
           <span class="toggle-authors">[Show All]</span>
         </span>
       </p>
-      <em>arXiv</em>, Jun 2025
+      <em>arXiv</em>, 2025
       <br>
       [ <a href="https://arxiv.org/abs/2506.13784">Paper</a> ]
     </td>
@@ -95,7 +95,7 @@ date: 2025-05-06 17:36:01
           <span class="toggle-authors">[Show All]</span>
         </span>
       </p>
-      <em>arXiv</em>, Jun 2025
+      <em>arXiv</em>, 2025
       <br>
       [ <a href="https://arxiv.org/abs/2506.12909">Paper</a> ]
     </td>
@@ -120,7 +120,7 @@ date: 2025-05-06 17:36:01
           <span class="toggle-authors">[Show All]</span>
         </span>
       </p>
-      <em>NeurIPS</em>, Feb 2025
+      <em>NeurIPS</em>, 2025
       <br>
       [ <a href="https://arxiv.org/abs/2502.14739">Paper</a> ]
     </td>
