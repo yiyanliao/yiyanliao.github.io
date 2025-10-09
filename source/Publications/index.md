@@ -145,7 +145,9 @@ date: 2025-05-06 17:36:01
       <h4 class="publication-title">Benchmarking Cofolding Methods for Molecular Glue Ternary Structure Prediction</h4>
     </a>
     <p class="publication-authors">
-      <strong>Yiyan Liao</strong><sup>†</sup>, Jintao Zhu<sup>†*</sup>, Juan Xie, Luhua Lai<sup>*</sup>, Jianfeng Pei<sup>*</sup>
+      <span class="author-toggle-container">
+        <span><strong>Yiyan Liao</strong><sup>†</sup>, Jintao Zhu<sup>†*</sup>, Juan Xie, Luhua Lai<sup>*</sup>, Jianfeng Pei<sup>*</sup></span>
+      </span>
     </p>
     <p class="publication-venue">Journal of Chemical Information and Modeling, 2025</p>
     <div class="publication-links">
