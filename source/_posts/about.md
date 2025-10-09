@@ -7,61 +7,70 @@ academia: true
 
 <style>
   /* --- Global Styles --- */
-  body {
-    font-family: -apple-system, BlinkMacSystem-Font, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    line-height: 1.6;
-    background-color: #f9f9f9; /* A light background for the page */
-  }
+  /* body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    line-height: 1.7;
+    color: #333;
+  } */
 
-  /* --- Main Container Card --- */
-  .about-container {
-    max-width: 900px;
-    margin: 40px auto; /* Center the container on the page */
-    padding: 40px 50px;
-    background-color: #ffffff;
-    border-radius: 12px;
-    border: 1px solid #e0e0e0;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+  /* --- Page Container --- */
+  /* This targets the main content area in many themes */
+  #main, .main, .post-block, .post-body {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
   }
-
-  /* --- Header --- */
+  
+  /* --- Headings --- */
   h1 {
-    font-size: 2.5em;
+    font-size: 2.8em;
     font-weight: 700;
-    margin-bottom: 0.2em;
+    margin-bottom: 0.1em;
+    color: #1a1a1a;
   }
 
-  .subtitle {
+  /* Subtitle right below the main name */
+  h1 + p {
+    font-size: 1.1em;
+    color: #666;
+    margin-top: 0;
+    margin-bottom: 1.5em;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1.5em;
+  }
+
+  h2 {
+    font-size: 1.6em;
+    font-weight: 600;
+    color: #222;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 8px;
+    margin-top: 2.5em;
+    margin-bottom: 1.5em;
+  }
+  
+  /* --- Blockquote --- */
+  blockquote {
+    border-left: 4px solid #007bff;
+    padding-left: 20px;
+    margin: 2em 0;
+    font-style: italic;
     font-size: 1.1em;
     color: #555;
-    margin-top: 0;
-    margin-bottom: 1em;
-  }
-
-  blockquote {
-    font-family: serif;
-    font-style: italic;
-    font-size: 1.2em;
-    color: #333;
-    margin: 30px 0;
-    padding-left: 20px;
-    border-left: 3px solid #007bff;
-  }
-
-  /* --- Section Styles --- */
-  h2 {
-    font-size: 1.5em;
-    font-weight: 600;
+    background-color: #f9f9f9;
+    padding-top: 10px;
     padding-bottom: 10px;
-    border-bottom: 1px solid #eee;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    border-radius: 0 8px 8px 0;
   }
-
-  /* --- List Styling for Achievements, Interests, etc. --- */
+  
+  blockquote p {
+    margin: 0;
+  }
+  
+  /* --- Lists --- */
   ul {
     list-style-type: none;
-    padding-left: 0;
+    padding-left: 10px;
   }
 
   li {
@@ -70,57 +79,67 @@ academia: true
     position: relative;
   }
 
-  /* Custom bullet points for a cleaner look */
+  /* Custom bullet point for lists */
   li::before {
     content: '•';
     position: absolute;
     left: 0;
-    top: 0;
+    top: -2px;
     color: #007bff;
-    font-size: 1.2em;
-    line-height: 1;
-  }
-  
-  strong {
-      color: #111;
+    font-size: 1.4em;
+    font-weight: bold;
   }
 
-  /* --- Links & Separators --- */
+  /* Sub-lists */
+  ul ul {
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+  }
+  
+  ul ul li {
+    margin-bottom: 0.6em;
+  }
+  
+  ul ul li::before {
+    content: '–';
+    color: #555;
+    top: -4px;
+  }
+  
+  li strong {
+    color: #222;
+    font-weight: 600;
+  }
+  
+  li em {
+    color: #444;
+  }
+
+  /* --- Links --- */
   a {
     color: #0056b3;
     text-decoration: none;
-    font-weight: 500;
+    transition: color 0.2s;
   }
 
   a:hover {
+    color: #007bff;
     text-decoration: underline;
   }
-
+  
+  /* --- Horizontal Rule --- */
   hr {
     border: 0;
     height: 1px;
     background-color: #e0e0e0;
-    margin: 40px 0;
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .about-container {
-      padding: 30px 25px;
-      margin: 20px;
-    }
-    h1 {
-      font-size: 2em;
-    }
+    margin: 3em 0;
   }
 </style>
 
-<div class="about-container">
-
 # **Yiyan Liao**
 
-<p class="subtitle">Undergraduate Student · Bioinformatics<br>
-School of Life Sciences, Peking University</p>
+Undergraduate Student · Bioinformatics  
+School of Life Sciences, Peking University
 
 > Be a rational poet.
 
@@ -164,7 +183,7 @@ School of Life Sciences, Peking University</p>
 ## 💼 Internships
 
 - **Moonshot AI** *Reinforcement Learning Intern*, Feb 2025 – Jun 2025  
-  <a href="https://www.moonshot.cn" target="_blank" rel="noopener noreferrer">moonshot.cn</a>
+  [moonshot.cn](https://www.moonshot.cn)
 - **Tencent**
   Biological Large Language Models (LLMs), Jun 2025 - Present
 
@@ -175,4 +194,4 @@ School of Life Sciences, Peking University</p>
 - **MBTI**: ISTP (Introverted, Sensing, Thinking, Perceiving)
 - **Hobbies**: Hip-hop, rock music, movies
 
-</div>
+---
