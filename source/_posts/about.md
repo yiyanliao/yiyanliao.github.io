@@ -22,6 +22,10 @@ School of Life Sciences, Peking University
 ---
 
 ## 🏅 Academic Achievements
+- 🆕🎉 **2024-2025 Peking University Merit Student**
+  *Sep 2025*
+- 🆕🎉 **2024-2025 Peking University Qin Wanshun Jin Yunhui Scholarship**
+  *Sep 2025*
 - **2025 Beijing Natural Science Foundation Undergraduate Research Program**
   Development and Validation of Deep Learning-Based Virtual Screening Methods for Molecular Glues, *Jul 2025*
 - **33th Peking University "Challenge Cup" Interdisciplinary Student Extracurricular Academic Science and Technology Works Competition**

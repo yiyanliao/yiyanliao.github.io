@@ -34,10 +34,35 @@ date: 2025-05-06 17:36:01
 <table>
   <tr>
     <td style="width: 200px; padding-right: 20px; border: none; vertical-align: top;">
+      <img src="https://raw.githubusercontent.com/yiyanliao/yiyanliao.github.io/main/themes/Academia/source/img/MGTbind_TOC.png" alt="MGTbind: a comprehensive database of molecular glue ternary interactome" class="publication-image" style="width:100%; border-radius:8px;">
+    </td>
+    <td style="vertical-align: top; border: none;">
+      <a href="https://doi.org/10.1093/nar/gkaf1075" style="text-decoration: none; color: inherit;">
+        <strong style="font-size: 1.1em;">MGTbind: a comprehensive database of molecular glue ternary interactome</strong>
+      </a>
+      <p class="publication-authors">
+        <span class="author-toggle-container">
+          <span class="authors-short">Jintao Zhu<sup>†</sup>, <strong>Yiyan Liao</strong><sup>†</sup>, Haoyu Lin<sup>†</sup>, ..., Luhua Lai<sup>*</sup>, Jianfeng Pei<sup>*</sup></span>
+          <span class="authors-full" style="display: none;">Jintao Zhu<sup>†</sup>, <strong>Yiyan Liao</strong><sup>†</sup>, Haoyu Lin<sup>†</sup>, Juan Xie, Zhichao Deng, Jinyu Han, Zhen Zhang, Jinchuan Xiao, Zhiyao Wang, Shuaipeng Zhang, Luhua Lai<sup>*</sup>, Jianfeng Pei<sup>*</sup></span>
+          <span class="toggle-authors">[Show All]</span>
+        </span>
+      </p>
+      <em>Nucleic Acids Research</em>, 2025
+      <br>
+      [ <a href="https://doi.org/10.1093/nar/gkaf1075">Paper</a> ]
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <td style="width: 200px; padding-right: 20px; border: none; vertical-align: top;">
       <img src="https://raw.githubusercontent.com/yiyanliao/yiyanliao.github.io/main/themes/Academia/source/img/MGBench.png" alt="Benchmarking Cofolding Methods for Molecular Glue Ternary Structure Prediction" class="publication-image" style="width:100%; border-radius:8px;">
     </td>
     <td style="vertical-align: top; border: none;">
-      <a href=" https://doi.org/10.1021/acs.jcim.5c01860" style="text-decoration: none; color: inherit;">
+      <a href="https://doi.org/10.1021/acs.jcim.5c01860" style="text-decoration: none; color: inherit;">
         <strong style="font-size: 1.1em;">Benchmarking Cofolding Methods for Molecular Glue Ternary Structure Prediction</strong>
       </a>
       <p class="publication-authors">
@@ -45,7 +70,7 @@ date: 2025-05-06 17:36:01
       </p>
       <em>Journal of Chemical Information and Modeling</em>, 2025
       <br>
-      [ <a href=" https://doi.org/10.1021/acs.jcim.5c01860">Paper</a> ]
+      [ <a href="https://doi.org/10.1021/acs.jcim.5c01860">Paper</a> ]
     </td>
   </tr>
 </table>
