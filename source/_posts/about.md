@@ -62,6 +62,13 @@ School of Life Sciences, Peking University
 
 ---
 
+## 🎤 Talk Slides
+
+- UHPB JC: Toward *De Novo* Protein Design from Natural Language
+  [PowerPoint](https://disk.pku.edu.cn/link/AA6EFCEAA4ADB049C9A88A2D9B66949E35)
+
+---
+
 ## 💡 About Me
 
 - **MBTI**: ISTP (Introverted, Sensing, Thinking, Perceiving)
