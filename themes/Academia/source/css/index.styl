@@ -42,7 +42,7 @@ blockquote
   color: #666;
   font-style: italic;
   background-color transparent;
-  border-left: 4px solid $theme-blue;
+  border-left: 4px solid $theme-primary;
   padding: 1rem 1rem 1rem 2rem;
   margin: 1.5rem 0;
   p
@@ -139,7 +139,7 @@ blockquote
   top: 22px;
   height: 30px;
   width: 30px;
-  background-color: $theme-blue;
+  background-color: $theme-primary;
   color: #fff;
   cursor: pointer;
   padding: 0px 0.3rem;
@@ -185,7 +185,7 @@ blockquote
           left: 0;
           bottom: 0;
           height: 4px;
-          background: $theme-blue;
+          background: $theme-primary;
           width: 100%;
           -webkit-transition: all 0.2s ease-in-out;
           transition: all 0.2s ease-in-out;
@@ -193,7 +193,7 @@ blockquote
           -ms-transform: scaleX(0);
           transform: scaleX(0);
         &:hover
-          color: $theme-blue;
+          color: $theme-primary;
           &::before
             -webkit-transform: scaleX(1);
             -ms-transform: scaleX(1);
@@ -241,14 +241,14 @@ blockquote
   li
     font-size 1.8rem
   a
-    color $theme-blue
+    color $theme-primary
     text-decoration none
     border-bottom 1px solid $theme-blue
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
-  &:hover
-    color: $theme-accent-hover;
-    border-bottom-color: $theme-accent-hover;
+    &:hover
+      color: $theme-accent-hover;
+      border-bottom-color: $theme-accent-hover;
 
   .highlight
     overflow: auto;
@@ -456,7 +456,7 @@ blockquote
       text-decoration underline
 
 .cv-links
-  color: $theme-dark-blue !important
+  color: $theme-primary-dark !important
   display: inline-block;
   position: relative;
   font-size: 1.4rem;
@@ -563,8 +563,8 @@ blockquote
     color: #9ba1a6;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
-  &:hover
-      color: $theme-primary;
+    &:hover
+        color: $theme-primary;
 
 .footer_wrap
   max-width: 600px;
@@ -746,4 +746,4 @@ blockquote
 ::-webkit-scrollbar-thumb
   //border-radius: 10px;
   background-color: rgba(34, 124, 224, 0.5);
-  border-radius: 10px; // 给滚动条加个圆角
+  border-radius: 10px;
