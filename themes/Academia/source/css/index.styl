@@ -1,10 +1,13 @@
 @import 'user'
 @import '_highlight/highlight.styl'
 
-$font-family = -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$theme-blue = #1353d7;
-$theme-dark-blue = #096494;
-$theme-red = #c62641;
+$font-family-body = "Mulish", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-heading = "Montserrat", $font-family-body
+$theme-primary = #1167db
+$theme-primary-dark = #0053d6
+$theme-accent-hover = #43a4e9
+$theme-code-bg = #f0f7ff 
+$theme-code-color = #0053d6 
 
 *
   -webkit-text-size-adjust: none;
@@ -23,13 +26,13 @@ body
   color: #494e52;
   font-size: 1.8em;
   line-height: 1.5;
-  font-family: $font-family
+  font-family: $font-family-body
   scroll-behavior smooth
 
 a,
 span,
 .btn
-  font-family: $font-family
+  font-family: $font-family-body
 
 img
   max-width 100%
@@ -74,13 +77,14 @@ blockquote
     display: block;
     margin: 0 1.6rem;
     padding: 0.8rem 0;
-    color: #7a8288;
-    font-weight: 600;
+    color: #494e52;
+    font-family: $font-family-heading
+    font-weight: 700;
     text-decoration: none;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     &:hover
-      color: black;
+      color: $theme-primary;
 
 @media (max-width: 34em)
   .menus-open .menus_items
@@ -172,6 +176,8 @@ blockquote
         margin: 0 1.6rem;
         padding: 0.8rem 0;
         color: #494e52;
+        font-family: $font-family-heading
+        font-weight: 600;
         text-decoration: none;
         &::before
           content: "";
@@ -229,6 +235,8 @@ blockquote
     font-size 2.8rem
   h3
     font-size 2.6rem
+  h1, h2, h3
+      font-family: $font-family-heading
   p,
   li
     font-size 1.8rem
@@ -238,33 +246,34 @@ blockquote
     border-bottom 1px solid $theme-blue
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
-    &:hover
-      color: $theme-red;
-      border-bottom-color: $theme-red;
+  &:hover
+    color: $theme-accent-hover;
+    border-bottom-color: $theme-accent-hover;
 
   .highlight
     overflow: auto;
     margin: 0 0 1rem;
     padding: 0;
-    background: #f8f8f8;
+    background: $theme-code-bg;
     color: #525252;
+    border-radius: 8px;
     line-height: 20px;
 
   .gutter pre
     padding-right: 0.8rem;
     padding-left: 0.7rem;
-    background-color: #f8f8f8;
-    color: #cfd8dc;
+    background-color: #eaf3fe;
+    color: #90a4ae;
     text-align: right;
 
   code
     font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
     padding: 0.2rem 0.4rem;
     margin: 0 0.1rem;
-    background: #f3f4f6;
-    border-radius: 4px;
+    background: $theme-code-bg;
+    color: $theme-code-color;
+    font-weight: 600;    border-radius: 4px;
     font-size: 0.9em;
-    color: #494e52;
     word-wrap: break-word;
 
 @media screen and (min-width: 66.67em)
@@ -320,6 +329,7 @@ blockquote
   h3
     margin: 0px;
     font-size 1.8rem
+    font-family: $font-family-heading
   .author-bio
     font-size: 1.2rem;
     margin: .3rem 0;
@@ -350,7 +360,7 @@ blockquote
   font-size: 0.75em;
   font-weight: bold;
   text-align: center;
-  background-color: rgb(122, 130, 136);
+  background-color: $theme-primary;
   cursor: pointer;
   color: rgb(255, 255, 255) !important;
   padding: 0.6em 1em;
@@ -360,18 +370,21 @@ blockquote
   border-style: initial !important;
   border-color: initial !important;
   border-image: initial !important;
+  transition: all 0.2s ease-in-out;
   &:hover
-    background-color: rgb(51, 51, 51);
+    background-color: $theme-primary-dark;
 
 .m-social-links
-  background-color: rgb(255, 255, 255);
-  color: rgb(122, 130, 136) !important;
+  background-color: #fff;
+  color: $theme-primary !important;
   border-width: 1px !important;
   border-style: solid !important;
-  border-color: rgb(189, 193, 196) !important;
+  border-color: $theme-primary !important;
+  transition: all 0.2s ease-in-out;
   border-image: initial !important;
   &:hover
-    color: rgb(255, 255, 255) !important;
+    background-color: $theme-primary;
+    color: #fff !important;
 
 .social-icons
   visibility hidden
@@ -420,7 +433,7 @@ blockquote
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     &:hover
-      color: $theme-red;
+      color: $theme-accent-hover;
 
 .is-open .social-icons
   visibility visible
@@ -544,14 +557,14 @@ blockquote
   animation: intro 0.3s both;
   -webkit-animation-delay: 0.45s;
   animation-delay: 0.45s;
-  background-color: #f2f3f3;
-  border-top: 1px solid #bdc1c4;
+  background-color: #f8fafd; 
+  border-top: 1px solid #e0e8f0; 
   a
     color: #9ba1a6;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
-    &:hover
-      color: black;
+  &:hover
+      color: $theme-primary;
 
 .footer_wrap
   max-width: 600px;
@@ -595,7 +608,7 @@ blockquote
   position: absolute;
   height: 30px;
   width: 30px;
-  background-color: rgb(122, 130, 136);
+  background-color: $theme-primary;
   color: rgb(255, 255, 255);
   cursor: pointer;
   padding: 0px 0.3rem;
@@ -706,7 +719,11 @@ blockquote
     margin-top: 3px;
     width: 30px;
     height: 30px;
-    background-color: #7a8288;
+    background-color: $theme-primary;
+    opacity: 0.8;
+    transition: opacity 0.2s ease-in-out;
+    &:hover
+      opacity: 1;
     color: #fff;
     text-align: center;
     text-decoration: none;
@@ -728,4 +745,5 @@ blockquote
 
 ::-webkit-scrollbar-thumb
   //border-radius: 10px;
-  background-color: rgba(122, 130, 136, 0.4);
+  background-color: rgba(34, 124, 224, 0.5);
+  border-radius: 10px; // 给滚动条加个圆角
