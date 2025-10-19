@@ -1,13 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+@import 'user'
+@import '_highlight/highlight.styl'
 @import 'user'
 @import '_highlight/highlight.styl'
 
-$font-family-body = "Mulish", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$font-family-heading = "Montserrat", $font-family-body
-$theme-primary = #1167db
-$theme-primary-dark = #0053d6
-$theme-accent-hover = #43a4e9
-$theme-code-bg = #f0f7ff 
-$theme-code-color = #0053d6 
+$font-family = 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";$theme-blue = #1353d7;
+$theme-dark-blue = #096494;
+$theme-red = #c62641;
 
 *
   -webkit-text-size-adjust: none;
@@ -26,13 +26,13 @@ body
   color: #494e52;
   font-size: 1.8em;
   line-height: 1.5;
-  font-family: $font-family-body
+  font-family: $font-family
   scroll-behavior smooth
 
 a,
 span,
 .btn
-  font-family: $font-family-body
+  font-family: $font-family
 
 img
   max-width 100%
@@ -42,7 +42,7 @@ blockquote
   color: #666;
   font-style: italic;
   background-color transparent;
-  border-left: 4px solid $theme-primary;
+  border-left: 4px solid $theme-blue;
   padding: 1rem 1rem 1rem 2rem;
   margin: 1.5rem 0;
   p
@@ -77,14 +77,13 @@ blockquote
     display: block;
     margin: 0 1.6rem;
     padding: 0.8rem 0;
-    color: #494e52;
-    font-family: $font-family-heading
-    font-weight: 700;
+    color: #7a8288;
+    font-weight: 600;
     text-decoration: none;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     &:hover
-      color: $theme-primary;
+      color: black;
 
 @media (max-width: 34em)
   .menus-open .menus_items
@@ -139,7 +138,7 @@ blockquote
   top: 22px;
   height: 30px;
   width: 30px;
-  background-color: $theme-primary;
+  background-color: $theme-blue;
   color: #fff;
   cursor: pointer;
   padding: 0px 0.3rem;
@@ -176,8 +175,6 @@ blockquote
         margin: 0 1.6rem;
         padding: 0.8rem 0;
         color: #494e52;
-        font-family: $font-family-heading
-        font-weight: 600;
         text-decoration: none;
         &::before
           content: "";
@@ -185,7 +182,7 @@ blockquote
           left: 0;
           bottom: 0;
           height: 4px;
-          background: $theme-primary;
+          background: $theme-blue;
           width: 100%;
           -webkit-transition: all 0.2s ease-in-out;
           transition: all 0.2s ease-in-out;
@@ -193,7 +190,7 @@ blockquote
           -ms-transform: scaleX(0);
           transform: scaleX(0);
         &:hover
-          color: $theme-primary;
+          color: $theme-blue;
           &::before
             -webkit-transform: scaleX(1);
             -ms-transform: scaleX(1);
@@ -235,45 +232,42 @@ blockquote
     font-size 2.8rem
   h3
     font-size 2.6rem
-  h1, h2, h3
-      font-family: $font-family-heading
   p,
   li
     font-size 1.8rem
   a
-    color $theme-primary
+    color $theme-blue
     text-decoration none
     border-bottom 1px solid $theme-blue
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     &:hover
-      color: $theme-accent-hover;
-      border-bottom-color: $theme-accent-hover;
+      color: $theme-red;
+      border-bottom-color: $theme-red;
 
   .highlight
     overflow: auto;
     margin: 0 0 1rem;
     padding: 0;
-    background: $theme-code-bg;
+    background: #f8f8f8;
     color: #525252;
-    border-radius: 8px;
     line-height: 20px;
 
   .gutter pre
     padding-right: 0.8rem;
     padding-left: 0.7rem;
-    background-color: #eaf3fe;
-    color: #90a4ae;
+    background-color: #f8f8f8;
+    color: #cfd8dc;
     text-align: right;
 
   code
     font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
     padding: 0.2rem 0.4rem;
     margin: 0 0.1rem;
-    background: $theme-code-bg;
-    color: $theme-code-color;
-    font-weight: 600;    border-radius: 4px;
+    background: #f3f4f6;
+    border-radius: 4px;
     font-size: 0.9em;
+    color: #494e52;
     word-wrap: break-word;
 
 @media screen and (min-width: 66.67em)
@@ -329,7 +323,6 @@ blockquote
   h3
     margin: 0px;
     font-size 1.8rem
-    font-family: $font-family-heading
   .author-bio
     font-size: 1.2rem;
     margin: .3rem 0;
@@ -360,7 +353,7 @@ blockquote
   font-size: 0.75em;
   font-weight: bold;
   text-align: center;
-  background-color: $theme-primary;
+  background-color: rgb(122, 130, 136);
   cursor: pointer;
   color: rgb(255, 255, 255) !important;
   padding: 0.6em 1em;
@@ -370,21 +363,18 @@ blockquote
   border-style: initial !important;
   border-color: initial !important;
   border-image: initial !important;
-  transition: all 0.2s ease-in-out;
   &:hover
-    background-color: $theme-primary-dark;
+    background-color: rgb(51, 51, 51);
 
 .m-social-links
-  background-color: #fff;
-  color: $theme-primary !important;
+  background-color: rgb(255, 255, 255);
+  color: rgb(122, 130, 136) !important;
   border-width: 1px !important;
   border-style: solid !important;
-  border-color: $theme-primary !important;
-  transition: all 0.2s ease-in-out;
+  border-color: rgb(189, 193, 196) !important;
   border-image: initial !important;
   &:hover
-    background-color: $theme-primary;
-    color: #fff !important;
+    color: rgb(255, 255, 255) !important;
 
 .social-icons
   visibility hidden
@@ -433,7 +423,7 @@ blockquote
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     &:hover
-      color: $theme-accent-hover;
+      color: $theme-red;
 
 .is-open .social-icons
   visibility visible
@@ -456,7 +446,7 @@ blockquote
       text-decoration underline
 
 .cv-links
-  color: $theme-primary-dark !important
+  color: $theme-dark-blue !important
   display: inline-block;
   position: relative;
   font-size: 1.4rem;
@@ -557,14 +547,14 @@ blockquote
   animation: intro 0.3s both;
   -webkit-animation-delay: 0.45s;
   animation-delay: 0.45s;
-  background-color: #f8fafd; 
-  border-top: 1px solid #e0e8f0; 
+  background-color: #f2f3f3;
+  border-top: 1px solid #bdc1c4;
   a
     color: #9ba1a6;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     &:hover
-        color: $theme-primary;
+      color: black;
 
 .footer_wrap
   max-width: 600px;
@@ -608,7 +598,7 @@ blockquote
   position: absolute;
   height: 30px;
   width: 30px;
-  background-color: $theme-primary;
+  background-color: rgb(122, 130, 136);
   color: rgb(255, 255, 255);
   cursor: pointer;
   padding: 0px 0.3rem;
@@ -719,11 +709,7 @@ blockquote
     margin-top: 3px;
     width: 30px;
     height: 30px;
-    background-color: $theme-primary;
-    opacity: 0.8;
-    transition: opacity 0.2s ease-in-out;
-    &:hover
-      opacity: 1;
+    background-color: #7a8288;
     color: #fff;
     text-align: center;
     text-decoration: none;
@@ -745,5 +731,4 @@ blockquote
 
 ::-webkit-scrollbar-thumb
   //border-radius: 10px;
-  background-color: rgba(34, 124, 224, 0.5);
-  border-radius: 10px;
+  background-color: rgba(122, 130, 136, 0.4);
