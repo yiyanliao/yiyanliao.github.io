@@ -10,383 +10,434 @@ academia: true
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Yiyan Liao</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Merriweather:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
-    
+    <title>Yiyan Liao - About</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <style>
-        /* --- Basic Setup --- */
-        :root {
-            --primary-color: #333;
-            --secondary-color: #555;
-            --accent-color: #0056b3; /* A professional blue */
-            --bg-color: #ffffff;
-            --light-gray: #f4f4f4;
-            --border-color: #ddd;
-        }
-
+        /* --- General Page Styles --- */
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.7;
-            background-color: var(--bg-color);
-            color: var(--primary-color);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 960px;
+            background-color: #fcfcfc;
+            color: #333;
+            max-width: 900px;
             margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* --- Main Container --- */
+        .about-container {
+            width: 100%;
+        }
+
+        /* --- Header Section --- */
+        .header-section {
+            text-align: center;
             padding: 40px 20px;
+            border-bottom: 2px solid #f0f0f0;
+            margin-bottom: 40px;
         }
 
-        /* --- Typography --- */
-        h1, h2, h3 {
-            font-family: 'Inter', sans-serif;
+        .header-section h1 {
+            font-size: 2.5em;
             font-weight: 700;
-            color: var(--primary-color);
-            margin-top: 1.5em;
-            margin-bottom: 0.8em;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.25rem;
-            letter-spacing: -1px;
-        }
-
-        h2 {
-            font-size: 1.75rem;
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 8px;
-            margin-top: 2.5rem;
-        }
-        
-        h2::before {
-            content: attr(data-icon) " ";
-            font-size: 1.5rem;
-            margin-right: 8px;
-            vertical-align: middle;
-        }
-
-        p, li {
-            font-size: 1rem;
-            color: var(--secondary-color);
-        }
-
-        a {
-            color: var(--accent-color);
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.2s ease;
-        }
-
-        a:hover {
-            text-decoration: underline;
-            opacity: 0.8;
-        }
-        
-        strong {
-            font-weight: 700;
-            color: var(--primary-color);
-        }
-
-        /* --- Header / Hero Section --- */
-        .header {
-            text-align: left;
-            margin-bottom: 3rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .header .subtitle {
-            font-size: 1.25rem;
-            font-weight: 400;
-            color: var(--secondary-color);
             margin: 0;
+            color: #111;
         }
 
-        .header .quote {
+        .header-section .subtitle {
+            font-size: 1.2em;
+            color: #555;
+            margin-top: 8px;
+        }
+
+        .header-section .affiliation {
+            font-size: 1.1em;
+            color: #555;
+            margin-top: 4px;
+        }
+
+        .header-section .quote {
             font-family: 'Merriweather', serif;
-            font-size: 1.2rem;
             font-style: italic;
+            font-size: 1.1em;
             color: #777;
-            margin-top: 1rem;
-            border-left: 3px solid var(--accent-color);
-            padding-left: 15px;
-        }
-        
-        /* --- New Tag Style --- */
-        .new-tag {
-            background-color: #e6f7ff;
-            color: #0056b3;
-            border: 1px solid #b3d9ff;
-            border-radius: 4px;
-            padding: 2px 6px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            margin-right: 8px;
-            vertical-align: middle;
-            display: inline-block;
+            margin-top: 20px;
         }
 
-        /* --- Main Content Layout (2-column) --- */
-        .main-content {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem 4rem;
+        /* --- General Section Styling --- */
+        .content-section {
+            margin-bottom: 40px;
+            background-color: #ffffff;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
         }
 
-        @media (min-width: 768px) {
-            .main-content {
-                grid-template-columns: 3fr 1fr; /* Main content 3/4, sidebar 1/4 */
-            }
-            .sidebar {
-                grid-row: 1 / span 2; /* Make sidebar span across all rows in its column */
-                grid-column: 2;
-            }
-            .main-column {
-                grid-column: 1;
-                grid-row: 1;
-            }
+        .section-title {
+            font-size: 1.8em;
+            font-weight: 600;
+            color: #000;
+            border-bottom: 1px solid #e5e5e5;
+            padding-bottom: 12px;
+            margin-top: 0;
+            margin-bottom: 25px;
         }
 
-        /* --- Section Styling --- */
-        .section {
-            margin-bottom: 2rem;
-        }
-
-        .section ul {
+        ul {
             list-style-type: none;
             padding-left: 0;
         }
 
-        .section li {
+        li {
+            margin-bottom: 15px;
             position: relative;
-            padding-left: 1.5rem;
-            margin-bottom: 1.25rem;
         }
 
-        .section li::before {
-            content: '•';
+        /* --- Section-Specific Styles --- */
+        
+        /* Education & Internships */
+        .entry-item {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .entry-title {
+            font-size: 1.15em;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin: 0;
+        }
+
+        .entry-date {
+            font-size: 0.95em;
+            color: #666;
+            font-weight: 500;
+            flex-shrink: 0;
+            margin-left: 15px;
+            margin-top: 2px; /* Align with title */
+        }
+        
+        .entry-subtitle {
+            font-size: 1.05em;
+            color: #555;
+            margin: 4px 0 0 0;
+        }
+        
+        .entry-link {
+            font-size: 0.9em;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .entry-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* Academic Achievements */
+        .achievement-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-left: 25px; /* Space for icon */
+        }
+        
+        .achievement-item::before {
+            content: '🏅'; /* Default icon */
             position: absolute;
             left: 0;
-            top: 0;
-            color: var(--accent-color);
-            font-weight: 700;
-            font-size: 1.2rem;
-            line-height: 1.7;
+            top: 2px;
+            font-size: 1.1em;
         }
         
-        .list-item-title {
-            display: block;
-            font-weight: 700;
-            font-size: 1.1rem;
-            color: var(--primary-color);
-            margin-bottom: 2px;
+        .achievement-item.new::before {
+            content: '🆕';
+        }
+        
+        .achievement-item.research::before {
+            content: '🔬';
         }
 
-        .list-item-meta {
-            display: block;
-            font-size: 0.9rem;
-            color: #777;
-            font-style: italic;
-            margin-bottom: 4px;
+        .achievement-item.award::before {
+            content: '🏆';
         }
         
-        .list-item-description {
+        .achievement-item.medal::before {
+            content: '🥇';
+        }
+
+        .achievement-item p {
             margin: 0;
-            color: var(--secondary-color);
+            padding-right: 15px;
         }
         
-        /* --- Specific Section: Education --- */
-        #education li::before { content: '🎓'; left: -5px; }
+        .achievement-text {
+            font-size: 1.05em;
+            color: #333;
+            font-weight: 500;
+        }
         
-        /* --- Specific Section: Achievements --- */
-        #achievements li::before { content: '🏅'; left: -5px; }
-
-        /* --- Specific Section: Internships --- */
-        #internships li::before { content: '💼'; left: -5px; }
-        
-        /* --- Specific Section: Talks --- */
-        #talks li::before { content: '🎤'; left: -5px; }
-        #talks a {
-            font-weight: 700;
+        .achievement-details {
+            font-size: 0.95em;
+            color: #666;
         }
 
-        /* --- Sidebar Sections --- */
-        .sidebar .section {
-            background-color: var(--light-gray);
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
+        .achievement-date {
+            font-size: 0.95em;
+            color: #666;
+            font-weight: 500;
+            text-align: right;
+            flex-shrink: 0;
         }
         
-        .sidebar h2 {
-            border-bottom: none;
-            font-size: 1.25rem;
-            margin-top: 0;
-            padding-bottom: 0;
+        /* Research Interests */
+        .interests-list > li {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #222;
+            padding-left: 25px;
         }
         
-        .sidebar ul {
-            padding-left: 1.25rem;
-        }
-        
-        .sidebar li {
-            padding-left: 0;
-            margin-bottom: 0.5rem;
-        }
-        
-        .sidebar li::before {
-            position: static;
-            font-size: 1rem;
-            margin-right: 8px;
+        .interests-list > li::before {
+            content: '🔬';
+            position: absolute;
+            left: 0;
+            top: 1px;
         }
 
-        /* --- Footer --- */
-        footer {
-            text-align: center;
-            margin-top: 4rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--border-color);
-            font-size: 0.9rem;
-            color: #999;
+        .interests-list ul {
+            padding-left: 20px;
+            margin-top: 8px;
         }
+        
+        .interests-list ul li {
+            font-size: 1em;
+            font-weight: 400;
+            color: #555;
+            list-style-type: disc;
+            margin-bottom: 5px;
+        }
+        
+        /* Talk Slides */
+        .talk-item {
+            padding-left: 25px;
+        }
+
+        .talk-item::before {
+            content: '🎤';
+            position: absolute;
+            left: 0;
+            top: 2px;
+            font-size: 1.1em;
+        }
+        
+        .talk-title {
+            font-size: 1.05em;
+            font-weight: 500;
+            color: #333;
+            margin: 0 0 5px 0;
+        }
+        
+        .talk-link a {
+            display: inline-block;
+            padding: 4px 10px;
+            border: 1px solid #007bff;
+            color: #007bff;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .talk-link a:hover {
+            background-color: #007bff;
+            color: white;
+        }
+        
+        /* About Me */
+        .about-me-list li {
+            font-size: 1.05em;
+            color: #333;
+            padding-left: 25px;
+        }
+        
+        .about-me-list li::before {
+            position: absolute;
+            left: 0;
+            top: 2px;
+            font-size: 1.1em;
+        }
+
+        .about-me-list li:nth-child(1)::before { content: '👤'; }
+        .about-me-list li:nth-child(2)::before { content: '🎧'; }
 
     </style>
 </head>
 <body>
 
-    <div class="container">
-        
-        <header class="header">
+    <div class="about-container">
+
+        <header class="header-section">
             <h1>Yiyan Liao</h1>
-            <p class="subtitle">Undergraduate Student · Bioinformatics<br>School of Life Sciences, Peking University</p>
+            <p class="subtitle">Undergraduate Student · Bioinformatics</p>
+            <p class="affiliation">School of Life Sciences, Peking University</p>
             <p class="quote">Be a rational poet.</p>
         </header>
 
-        <div class="main-content">
+        <section class="content-section">
+            <h2 class="section-title">🧬 Education</h2>
+            <ul>
+                <li class="entry-item">
+                    <div class="entry-header">
+                        <p class="entry-title">Peking University, School of Life Sciences</p>
+                        <span class="entry-date">2023 – Present</span>
+                    </div>
+                    <p class="entry-subtitle">B.E. in Bioinformatics</p>
+                </li>
+            </ul>
+        </section>
 
-            <main class="main-column">
-                
-                <section id="education" class="section">
-                    <h2 data-icon="🧬">Education</h2>
+        <section class="content-section">
+            <h2 class="section-title">🏅 Academic Achievements</h2>
+            <ul>
+                <li class="achievement-item new">
+                    <p>
+                        <span class="achievement-text">2024-2025 Peking University Merit Student</span>
+                    </p>
+                    <span class="achievement-date">Sep 2025</span>
+                </li>
+                <li class="achievement-item new">
+                    <p>
+                        <span class="achievement-text">2024-2025 Peking University Qin Wanshun Jin Yunhui Scholarship</span>
+                    </p>
+                    <span class="achievement-date">Sep 2025</span>
+                </li>
+                <li class="achievement-item research">
+                    <p>
+                        <span class="achievement-text">2025 Beijing Natural Science Foundation Undergraduate Research Program</span><br>
+                        <span class="achievement-details">Development and Validation of Deep Learning-Based Virtual Screening Methods for Molecular Glues</span>
+                    </p>
+                    <span class="achievement-date">Jul 2025</span>
+                </li>
+                <li class="achievement-item award">
+                    <p>
+                        <span class="achievement-text">33th Peking University "Challenge Cup" Interdisciplinary Student Extracurricular Academic Science and Technology Works Competition</span><br>
+                        <span class="achievement-details">Excellence Award (Team Leader)</span>
+                    </p>
+                    <span class="achievement-date">May 2025</span>
+                </li>
+                <li class="achievement-item medal">
+                    <p>
+                        <span class="achievement-text">International Genetically Engineered Machine (iGEM) 2024</span><br>
+                        <span class="achievement-details">Gold Medal – Team Peking (Wet Lab Leader)</span>
+                    </p>
+                    <span class="achievement-date">Oct 2024</span>
+                </li>
+                <li class="achievement-item award">
+                    <p>
+                        <span class="achievement-text">Peking University First Prize Scholarship for Freshmen</span><br>
+                        <span class="achievement-details">MingDe Scholarship</span>
+                    </p>
+                    <span class="achievement-date">Dec 2023</span>
+                </li>
+                <li class="achievement-item medal">
+                    <p>
+                        <span class="achievement-text">34th International Biology Olympiad (IBO)</span><br>
+                        <span class="achievement-details">Gold Medal</span>
+                    </p>
+                    <span class="achievement-date">Jul 2023</span>
+                </li>
+                <li class="achievement-item medal">
+                    <p>
+                        <span class="achievement-text">31st China National Biology Olympiad (CNBO)</span><br>
+                        <span class="achievement-details">National Team Member</span>
+                    </p>
+                    <span class="achievement-date">Aug 2022</span>
+                </li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">🔬 Research Interests</h2>
+            <ul class="interests-list">
+                <li>
+                    Computer-Aided Drug Design (CADD)
                     <ul>
-                        <li>
-                            <span class="list-item-title">Peking University, School of Life Sciences</span>
-                            <span class="list-item-meta">B.E. in Bioinformatics (2023 – Present)</span>
-                        </li>
+                        <li>Molecular Glues (MGs)</li>
                     </ul>
-                </section>
-
-                <section id="achievements" class="section">
-                    <h2 data-icon="🏅">Academic Achievements</h2>
+                </li>
+                <li>
+                    Large Language Models (LLMs)
                     <ul>
-                        <li>
-                            <span class="new-tag">🆕🎉</span>
-                            <span class="list-item-title">2024-2025 Peking University Merit Student</span>
-                            <span class="list-item-meta">Sep 2025</span>
-                        </li>
-                        <li>
-                            <span class="new-tag">🆕🎉</span>
-                            <span class="list-item-title">2024-2025 Peking University Qin Wanshun Jin Yunhui Scholarship</span>
-                            <span class="list-item-meta">Sep 2025</span>
-                        </li>
-                        <li>
-                            <span class="list-item-title">2025 Beijing Natural Science Foundation Undergraduate Research Program</span>
-                            <span class="list-item-meta">Jul 2025</span>
-                            <p class="list-item-description">Development and Validation of Deep Learning-Based Virtual Screening Methods for Molecular Glues</p>
-                        </li>
-                        <li>
-                            <span class="list-item-title">33th Peking University "Challenge Cup" Interdisciplinary Student Extracurricular Academic Science and Technology Works Competition</span>
-                            <span class="list-item-meta">Excellence Award (Team Leader), May 2025</span>
-                        </li>
-                        <li>
-                            <span class="list-item-title">International Genetically Engineered Machine (iGEM) 2024</span>
-                            <span class="list-item-meta">Gold Medal – Team Peking (Wet Lab Leader), Oct 2024</span>
-                        </li>
-                        <li>
-                            <span class="list-item-title">Peking University First Prize Scholarship for Freshmen</span>
-                            <span class="list-item-meta">MingDe Scholarship, Dec 2023</span>
-                        </li>
-                        <li>
-                            <span class="list-item-title">34th International Biology Olympiad (IBO)</span>
-                            <span class="list-item-meta">Gold Medal, Jul 2023</span>
-                        </li>
-                        <li>
-                            <span class="list-item-title">31st China National Biology Olympiad (CNBO)</span>
-                            <span class="list-item-meta">National Team Member, Aug 2022</span>
-                        </li>
+                        <li>Reinforcement Learning (RL)</li>
                     </ul>
-                </section>
-
-                <section id="internships" class="section">
-                    <h2 data-icon="💼">Internships</h2>
+                </li>
+                <li>
+                    Bioinformatics
                     <ul>
-                        <li>
-                            <span class="list-item-title">Tencent</span>
-                            <span class="list-item-meta">Jun 2025 - Present</span>
-                            <p class="list-item-description">Biological Large Language Models (LLMs)</p>
-                        </li>
-                        <li>
-                            <span class="list-item-title">Moonshot AI</span>
-                            <span class="list-item-meta">Reinforcement Learning Intern, Feb 2025 – Jun 2025</span>
-                            <p class="list-item-description"><a href="https://www.moonshot.cn" target="_blank" rel="noopener noreferrer">moonshot.cn</a></p>
-                        </li>
+                        <li>Cancer Mutation Analysis</li>
                     </ul>
-                </section>
-                
-                <section id="talks" class="section">
-                    <h2 data-icon="🎤">Talk Slides</h2>
-                    <ul>
-                        <li>
-                            <span class="list-item-title">UHPB JC 2025 Autumn: Toward <em>De Novo</em> Protein Design from Natural Language</span>
-                            <p class="list-item-description"><a href="https://disk.pku.edu.cn/link/AA6EFCEAA4ADB049C9A88A2D9B66949E35" target="_blank" rel="noopener noreferrer">[PowerPoint]</a></p>
-                        </li>
-                        <li>
-                            <span class="list-item-title">UHPB Annual Symposium 2025: The computational landscape of molecular glues: MGTbind database and ternary co-folding benchmark</span>
-                            <p class="list-item-description"><a href="https://disk.pku.edu.cn/link/AA292A2C4F226148A082E4F5AB790FDDC3" target="_blank" rel="noopener noreferrer">[PowerPoint]</a></p>
-                        </li>
-                    </ul>
-                </section>
+                </li>
+            </ul>
+        </section>
 
-            </main>
+        <section class="content-section">
+            <h2 class="section-title">💼 Internships</h2>
+            <ul>
+                <li class="entry-item">
+                    <div class="entry-header">
+                        <p class="entry-title">Tencent</p>
+                        <span class="entry-date">Jun 2025 - Present</span>
+                    </div>
+                    <p class="entry-subtitle">Biological Large Language Models (LLMs)</p>
+                </li>
+                <li class="entry-item">
+                    <div class="entry-header">
+                        <p class="entry-title">Moonshot AI</p>
+                        <span class="entry-date">Feb 2025 – Jun 2025</span>
+                    </div>
+                    <p class="entry-subtitle">Reinforcement Learning Intern</p>
+                    <a href="https://www.moonshot.cn" target="_blank" rel="noopener noreferrer" class="entry-link">moonshot.cn</a>
+                </li>
+            </ul>
+        </section>
 
-            <aside class="sidebar">
+        <section class="content-section">
+            <h2 class="section-title">🎤 Talk Slides</h2>
+            <ul>
+                <li class="talk-item">
+                    <p class="talk-title">UHPB Annual Symposium 2025: The computational landscape of molecular glues: MGTbind database and ternary co-folding benchmark</p>
+                    <div class="talk-link">
+                        <a href="https://disk.pku.edu.cn/link/AA292A2C4F226148A082E4F5AB790FDDC3" target="_blank" rel="noopener noreferrer">PowerPoint</a>
+                    </div>
+                </li>
+                <li class="talk-item">
+                    <p class="talk-title">UHPB JC 2025 Autumn: Toward <i>De Novo</i> Protein Design from Natural Language</p>
+                    <div class="talk-link">
+                        <a href="https://disk.pku.edu.cn/link/AA6EFCEAA4ADB049C9A88A2D9B66949E35" target="_blank" rel="noopener noreferrer">PowerPoint</a>
+                    </div>
+                </li>
+            </ul>
+        </section>
 
-                <section id="interests" class="section">
-                    <h2 data-icon="🔬">Research Interests</h2>
-                    <ul>
-                        <li><strong>Computer-Aided Drug Design (CADD)</strong>
-                            <ul><li>Molecular Glues (MGs)</li></ul>
-                        </li>
-                        <li><strong>Large Language Models (LLMs)</strong>
-                            <ul><li>Reinforcement Learning (RL)</li></ul>
-                        </li>
-                        <li><strong>Bioinformatics</strong>
-                            <ul><li>Cancer Mutation Analysis</li></ul>
-                        </li>
-                    </ul>
-                </section>
+        <section class="content-section">
+            <h2 class="section-title">💡 About Me</h2>
+            <ul class="about-me-list">
+                <li><strong>MBTI</strong>: ISTP (Introverted, Sensing, Thinking, Perceiving)</li>
+                <li><strong>Hobbies</strong>: Hip-hop, rock music, movies</li>
+            </ul>
+        </section>
 
-                <section id="about-me" class="section">
-                    <h2 data-icon="💡">About Me</h2>
-                    <ul>
-                        <li><strong>MBTI</strong>: ISTP</li>
-                        <li><strong>Hobbies</strong>: Hip-hop, rock music, movies</li>
-                    </ul>
-                </section>
+    </div>
 
-            </aside>
-
-        </div> <footer>
-            <p>&copy; 2025 Yiyan Liao. All rights reserved.</p>
-        </footer>
-
-    </div> </body>
+</body>
 </html>
