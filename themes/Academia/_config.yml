@@ -48,7 +48,7 @@ e_social_links:
 cv_dl:
   enable: true
   dir: https://raw.githubusercontent.com/yiyanliao/yiyanliao.github.io/main/themes/Academia/source/pdf/CV.pdf
-  description: CV as PDF.
+  description: CV as PDF
 
 # Box-shadow
 # display box-shadow on page or not
