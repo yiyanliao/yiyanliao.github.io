@@ -132,6 +132,7 @@ date: 2025-05-06 17:36:01
     <p class="publication-venue">Nucleic Acids Research, 2025</p>
     <div class="publication-links">
       <a href="https://doi.org/10.1093/nar/gkaf1075">Paper</a>
+      <a href="https://raw.githubusercontent.com/yiyanliao/yiyanliao.github.io/main/themes/Academia/source/pdf/MGTbind.pdf">PDF</a>
     </div>
   </div>
 </div>
