@@ -68,6 +68,9 @@ School of Life Sciences, Peking University
   [PowerPoint](https://disk.pku.edu.cn/link/AA6EFCEAA4ADB049C9A88A2D9B66949E35)
 - UHPB Annual Symposium 2025: The computational landscape of molecular glues: MGTbind database and ternary co-folding benchmark 
   [PowerPoint](https://disk.pku.edu.cn/link/AA292A2C4F226148A082E4F5AB790FDDC3)
+- Current topics on Genetics 2025 Spring: Genome Editing Technologies
+  [PowerPoint](https://disk.pku.edu.cn/link/AA3131C5036BB44D2ABE17C72E1FCA82E5)
+  
 ---
 
 ## 💡 About Me
