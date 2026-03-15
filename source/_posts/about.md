@@ -19,7 +19,7 @@ I am an undergraduate student majoring in Bioinformatics at the School of Life S
 
 ## Research Interests
 - Computer-aided molecular glue (MG) discovery
-- Generative Small Molecule/Enzyme Design
+- Generative small molecule/enzyme Design
 - Structural geometry deep learning & modeling
 - Reasoning & foundation biological large language models (LLMs)
 
