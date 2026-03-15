@@ -6,20 +6,24 @@ academia: true
 ---
 
 # **Yiyan Liao**
-
-Undergraduate Student · Bioinformatics  
-School of Life Sciences, Peking University
+He/Him/His
 
 > Be a rational poet.
 
----
+## About Me
+I am an undergraduate student majoring in Bioinformatics at the School of Life Sciences, Peking University, P.R.China, working with [Prof. Luhua Lai](http://mdl.ipc.pku.edu.cn/mdlweb/Lai.html) and [Prof. Jianfeng Pei](http://mdl.ipc.pku.edu.cn/mdlweb/Pei.html) in the [Molecular Design Laboratory](http://mdl.ipc.pku.edu.cn/mdlweb/home.php). I am also exploring large language models as a researcher in [Prof. Tong Yang](https://yangtonghome.github.io)'s research group. My research focuses on applying artificial intelligence algorithms to structural biology and molecular design, aiming to engineer next-generation therapeutic tools.
 
 ## Education
-
 - **Peking University**, School of Life Sciences  
   *B.E. in Bioinformatics* (2023 – 2027 expected)
 
----
+## Research Interests
+- Computer-aided molecular glue (MG) discovery
+- Generative Small Molecule/Enzyme Design
+- Structural geometry deep learning & modeling
+- Reasoning & foundation biological large language models (LLMs)
+
+You can find my publications here: [Publications](https://yiyanliao.github.io/Publications).
 
 ## Academic Achievements
 - **2024-2025 Peking University Merit Student**
@@ -39,19 +43,7 @@ School of Life Sciences, Peking University
 - **31st China National Biology Olympiad (CNBO)**  
   National Team Member, *Aug 2022*
 
----
-
-## Research Interests
-
-- Computer-aided molecular glue (MG) discovery
-- Generative Small Molecule/Enzyme Design
-- Structural geometry deep learning & modeling
-- Reasoning & foundation biological large language models (LLMs)
-
----
-
 ## Internships
-
 - **Moonshot AI**  
   *Reinforcement Learning Intern*, Feb 2025 – Jun 2025  
   [moonshot](https://www.moonshot.cn)
@@ -59,10 +51,7 @@ School of Life Sciences, Peking University
   Biological Large Language Models (LLMs), Jun 2025 - Present
   [tencent](https://www.tencent.com/en-us/about.html)
 
----
-
 ## Talk Slides
-
 - UHPB JC 2025 Autumn: Toward *De Novo* Protein Design from Natural Language
   [PowerPoint](https://disk.pku.edu.cn/link/AA6EFCEAA4ADB049C9A88A2D9B66949E35)
 - UHPB Annual Symposium 2025: The computational landscape of molecular glues: MGTbind database and ternary co-folding benchmark 
@@ -70,10 +59,7 @@ School of Life Sciences, Peking University
 - Current topics on Genetics 2025 Spring: Genome Editing Technologies
   [PowerPoint](https://disk.pku.edu.cn/link/AA3131C5036BB44D2ABE17C72E1FCA82E5)
   
----
-
 ## About Me
-
 - **MBTI**: ISTP (Introverted, Sensing, Thinking, Perceiving)
 - **Hobbies**: Hip-hop, rock music, movies
 
