@@ -14,17 +14,17 @@ School of Life Sciences, Peking University
 
 ---
 
-## 🧬 Education
+## Education
 
 - **Peking University**, School of Life Sciences  
-  *B.E. in Bioinformatics* (2023 – Present)
+  *B.E. in Bioinformatics* (2023 – 2027 expected)
 
 ---
 
-## 🏅 Academic Achievements
-- 🆕🎉 **2024-2025 Peking University Merit Student**
+## Academic Achievements
+- **2024-2025 Peking University Merit Student**
   *Sep 2025*
-- 🆕🎉 **2024-2025 Peking University Qin Wanshun Jin Yunhui Scholarship**
+- **2024-2025 Peking University Qin Wanshun Jin Yunhui Scholarship**
   *Sep 2025*
 - **2025 Beijing Natural Science Foundation Undergraduate Research Program**
   Development and Validation of Deep Learning-Based Virtual Screening Methods for Molecular Glues, *Jul 2025*
@@ -41,28 +41,27 @@ School of Life Sciences, Peking University
 
 ---
 
-## 🔬 Research Interests
+## Research Interests
 
-- **Computer-Aided Drug Design (CADD)**
-  - Molecular Glues (MGs)
-- **Large Language Models (LLMs)**
-  - Reinforcement Learning (RL)
-- **Bioinformatics**
-  - Cancer Mutation Analysis
+- Computer-aided molecular glue (MG) discovery
+- Generative Small Molecule/Enzyme Design
+- Structural geometry deep learning & modeling
+- Reasoning & foundation biological large language models (LLMs)
 
 ---
 
-## 💼 Internships
+## Internships
 
 - **Moonshot AI**  
   *Reinforcement Learning Intern*, Feb 2025 – Jun 2025  
-  [moonshot.cn](https://www.moonshot.cn)
+  [moonshot](https://www.moonshot.cn)
 - **Tencent**
   Biological Large Language Models (LLMs), Jun 2025 - Present
+  [tencent](https://www.tencent.com/en-us/about.html)
 
 ---
 
-## 🎤 Talk Slides
+## Talk Slides
 
 - UHPB JC 2025 Autumn: Toward *De Novo* Protein Design from Natural Language
   [PowerPoint](https://disk.pku.edu.cn/link/AA6EFCEAA4ADB049C9A88A2D9B66949E35)
@@ -73,7 +72,7 @@ School of Life Sciences, Peking University
   
 ---
 
-## 💡 About Me
+## About Me
 
 - **MBTI**: ISTP (Introverted, Sensing, Thinking, Perceiving)
 - **Hobbies**: Hip-hop, rock music, movies
