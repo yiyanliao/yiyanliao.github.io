@@ -13,6 +13,9 @@ He/Him/His
 ## About Me
 I am an undergraduate student majoring in Bioinformatics at the [School of Life Sciences](https://www.bio.pku.edu.cn/en/index/index.html), [Peking University](https://english.pku.edu.cn), P.R.China. Currently, I work on computer-aided drug discovery with [Prof. Luhua Lai](http://mdl.ipc.pku.edu.cn/mdlweb/Lai.html) and [Prof. Jianfeng Pei](http://mdl.ipc.pku.edu.cn/mdlweb/Pei.html) in the [Molecular Design Laboratory](http://mdl.ipc.pku.edu.cn/mdlweb/home.php). I am also an undergraduate research fellow in the [Anima AI+Science Lab](https://tensorlab.cms.caltech.edu/users/anima/index.html) at [Caltech](https://www.caltech.edu), under the supervision of [Prof. Anima Anandkumar](https://www.linkedin.com/in/anima-anandkumar/). Additionally, I am exploring large language models as a researcher in [Prof. Tong Yang](https://yangtonghome.github.io)'s research group. My research focuses on applying artificial intelligence algorithms to structural biology and molecular design, aiming to engineer next-generation therapeutic tools and beyond.
 
+## Recent News
+- 🆕🎉 [Apr 2026] I was awarded a 2026 [Caltech Summer Undergraduate Research Fellowships (SURF)](https://sfp.caltech.edu/undergraduate-research/programs/surf) award, hosted by [Prof. Anima Anandkumar](https://www.linkedin.com/in/anima-anandkumar/)! See you in Pasadena!
+
 ## Education
 - **Peking University**, School of Life Sciences  
   *B.E. in Bioinformatics* (2023 – 2027 expected)
@@ -26,6 +29,8 @@ I am an undergraduate student majoring in Bioinformatics at the [School of Life 
 You can find my publications here: [Publications](https://yiyanliao.github.io/Publications).
 
 ## Academic Achievements
+- 🆕🎉 **Bohrium+SciMaster×OpenClaw 48-Hour AI for Science Hackathon**
+  Second Prize (Project: GlueBind: A Deep Learning Framework for Large-Scale Molecular Glue Virtual Screening), *Mar 2026*
 - **2024-2025 Peking University Merit Student**
   *Sep 2025*
 - **2024-2025 Peking University Qin Wanshun Jin Yunhui Scholarship**
