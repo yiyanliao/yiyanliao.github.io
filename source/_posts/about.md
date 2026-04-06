@@ -53,7 +53,7 @@ You can find my publications here: [Publications](https://yiyanliao.github.io/Pu
   *Reinforcement Learning Intern*, Feb 2025 – Jun 2025  
   [moonshot](https://www.moonshot.cn)
 - **Tencent**
-  Biological Large Language Models (LLMs), Jun 2025 - Present
+  *Biological Large Language Models (LLMs) Intern*, Jun 2025 - Present
   [tencent](https://www.tencent.com/en-us/about.html)
 
 ## Talk Slides
