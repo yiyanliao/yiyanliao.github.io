@@ -64,7 +64,7 @@ You can find my publications here: [Publications](https://yiyanliao.github.io/Pu
 - Current topics on Genetics 2025 Spring: Genome Editing Technologies
   [PowerPoint](https://disk.pku.edu.cn/link/AA3131C5036BB44D2ABE17C72E1FCA82E5)
   
-## About Me
+## Miscellaneous
 - **MBTI**: ISTP (Introverted, Sensing, Thinking, Perceiving)
 - **Hobbies**: Hip-hop, rock music, movies
 
