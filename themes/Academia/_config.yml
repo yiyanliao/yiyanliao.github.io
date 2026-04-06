@@ -25,13 +25,13 @@ loading_bg:
 social:
   enable: true
 social_links:
-  fab fa-x-twitter: https://x.com/Yiyan_Liao
   # fab fa-facebook-square: /
   fab fa-github: https://github.com/yiyanliao
+  fab fa-linkedin: https://www.linkedin.com/in/yiyanliao/
+  fab fa-x-twitter: https://x.com/Yiyan_Liao
   # fab fa-stack-overflow: /
-  # fab fa-linkedin: /
   # fab fa-weibo: /
-  # fab fa-weixin: /
+  fab fa-weixin: liaoyy20041216
   # fab fa-qq: /
   fas fa-envelope: yiyanliao@stu.pku.edu.cn
   # fas fa-rss: /  #rss
