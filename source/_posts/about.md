@@ -63,12 +63,12 @@ You can find my publications here: [Publications](https://yiyanliao.github.io/Pu
   [PowerPoint](https://disk.pku.edu.cn/link/AA292A2C4F226148A082E4F5AB790FDDC3)
 - Current topics on Genetics 2025 Spring: Genome Editing Technologies
   [PowerPoint](https://disk.pku.edu.cn/link/AA3131C5036BB44D2ABE17C72E1FCA82E5)
-- Biology Olympiad Open Access:
-  [Zip](https://disk.pku.edu.cn/link/AAA33D2B20BC6E4F479F26EFDE4ABBBD3C)
   
 ## Miscellaneous
 - **MBTI**: ISTP (Introverted, Sensing, Thinking, Perceiving)
 - **Hobbies**: Hip-hop, rock music, movies
+- Biology Olympiad Open Access: [Zip](https://disk.pku.edu.cn/link/AAA33D2B20BC6E4F479F26EFDE4ABBBD3C)
+
 ---
 
 
