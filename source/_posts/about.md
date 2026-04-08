@@ -67,8 +67,7 @@ You can find my publications here: [Publications](https://yiyanliao.github.io/Pu
 ## Miscellaneous
 - **MBTI**: ISTP (Introverted, Sensing, Thinking, Perceiving)
 - **Hobbies**: Hip-hop, rock music, movies
-- Biology Olympiad Open Access: [Zip](https://disk.pku.edu.cn/link/AAA33D2B20BC6E4F479F26EFDE4ABBBD3C)
-
+- **Biology Olympiad Open Access**: [Zip](https://disk.pku.edu.cn/link/AAA33D2B20BC6E4F479F26EFDE4ABBBD3C)
 ---
 
 
