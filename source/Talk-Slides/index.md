@@ -85,7 +85,7 @@ date: 2026-04-12 21:52:09
 <div class="publication-entry">
   <div class="publication-details">
     <h4 class="publication-title"><em>De Novo</em> Design of Glutathione Transferases (GSTs) Using Protein Language Model ESM3</h4>
-    <p class="publication-venue">2026 Spring Biochemistry Lab</p>
+    <p class="publication-venue">2026 Spring Biochemistry Lab Teaching Assistant</p>
     <div class="publication-links">
       <a href="https://disk.pku.edu.cn/link/AA0C027B778B2A4FB28D5C745BE556BC88">PowerPoint</a>
     </div>
