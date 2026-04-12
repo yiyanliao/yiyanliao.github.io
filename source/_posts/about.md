@@ -57,6 +57,8 @@ You can find my publications here: [Publications](https://yiyanliao.github.io/Pu
   [tencent](https://www.tencent.com/en-us/about.html)
 
 ## Talk Slides
+- 2026 Spring Biochemistry Lab: *De Novo* Design of Glutathione Transferases (GSTs) Using Protein Language Model ESM3
+  [PowerPoint](https://disk.pku.edu.cn/link/AA0C027B778B2A4FB28D5C745BE556BC88)
 - UHPB JC 2026 Spring: BioMiner: A Multi-modal System for Automated Mining of Protein-Ligand Bioactivity Data from Literature
   [PowerPoint](https://disk.pku.edu.cn/link/AAFBB26EB541914C738B3E5061044ABBE0)
 - UHPB JC 2025 Autumn: Toward *De Novo* Protein Design from Natural Language
