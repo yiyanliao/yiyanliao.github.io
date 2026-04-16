@@ -22,7 +22,7 @@ I am an undergraduate student majoring in Bioinformatics at the [School of Life 
 
 ## Research Interests
 - Computer-aided molecular glue (MG) discovery
-- Generative small molecule/enzyme design
+- CLLM-based & structure-based generative drug design
 - Structural geometry deep learning & modeling
 - Reasoning & foundation biological large language models (LLMs)
 
