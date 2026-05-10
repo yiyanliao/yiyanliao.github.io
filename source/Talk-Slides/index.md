@@ -95,7 +95,7 @@ date: 2026-04-12 21:52:09
 <div class="publication-entry">
   <div class="publication-details">
     <h4 class="publication-title">The computational landscape of molecular glues: MGTbind database and ternary co-folding benchmark</h4>
-    <p class="publication-venue">UHPB Annual Symposium 2025</p>
+    <p class="publication-venue">2025 UHPB Annual Symposium</p>
     <div class="publication-links">
       <a href="https://disk.pku.edu.cn/link/AA292A2C4F226148A082E4F5AB790FDDC3">PowerPoint</a>
     </div>
@@ -117,7 +117,7 @@ date: 2026-04-12 21:52:09
 <div class="publication-entry">
   <div class="publication-details">
     <h4 class="publication-title">BioMiner: A Multi-modal System for Automated Mining of Protein-Ligand Bioactivity Data from Literature</h4>
-    <p class="publication-venue">UHPB JC 2026 Spring</p>
+    <p class="publication-venue">2026 Spring UHPB JC</p>
     <div class="publication-links">
       <a href="https://disk.pku.edu.cn/link/AAFBB26EB541914C738B3E5061044ABBE0">PowerPoint</a>
     </div>
@@ -127,7 +127,7 @@ date: 2026-04-12 21:52:09
 <div class="publication-entry">
   <div class="publication-details">
     <h4 class="publication-title">Toward <em>De Novo</em> Protein Design from Natural Language</h4>
-    <p class="publication-venue">UHPB JC 2025 Autumn</p>
+    <p class="publication-venue">2025 Autumn UHPB JC</p>
     <div class="publication-links">
       <a href="https://disk.pku.edu.cn/link/AA6EFCEAA4ADB049C9A88A2D9B66949E35">PowerPoint</a>
     </div>
@@ -136,10 +136,30 @@ date: 2026-04-12 21:52:09
 
 <div class="publication-entry">
   <div class="publication-details">
+    <h4 class="publication-title">Rag2Mol: Structure-based drug design based on Retrieval Augmented Generation</h4>
+    <p class="publication-venue">2025 Spring UHPB JC</p>
+    <div class="publication-links">
+      <a href="https://disk.pku.edu.cn/link/AA8E199E20F55A486AB2507407C1E4662D">PowerPoint</a>
+    </div>
+  </div>
+</div>
+
+<div class="publication-entry">
+  <div class="publication-details">
     <h4 class="publication-title">Genome Editing Technologies</h4>
-    <p class="publication-venue">Current topics on Genetics 2025 Spring</p>
+    <p class="publication-venue">2025 Spring Current topics on Genetics</p>
     <div class="publication-links">
       <a href="https://disk.pku.edu.cn/link/AA3131C5036BB44D2ABE17C72E1FCA82E5">PowerPoint</a>
+    </div>
+  </div>
+</div>
+
+<div class="publication-entry">
+  <div class="publication-details">
+    <h4 class="publication-title">Latest Advancement and Applications in Protein Structure Prediction AI Tools</h4>
+    <p class="publication-venue">2024 Autumn UHPB JC</p>
+    <div class="publication-links">
+      <a href="https://disk.pku.edu.cn/link/AAB250A6E031914F1291F3F3483DE66206">PowerPoint</a>
     </div>
   </div>
 </div>
