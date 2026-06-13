@@ -28,29 +28,33 @@ I am an undergraduate student majoring in Bioinformatics at the [School of Life 
 
 You can find my publications here: [Publications](https://yiyanliao.github.io/Publications).
 
-## Academic Achievements
-- **2026 Outstanding Teaching Assistant Award, School of Life Sciences, Peking University**
-  *Jun 2026*
-- **2026 Peking University School of Life Sciences 87 Excellent Research Project Scholarship**
-  First Prize (Project: Computational Landscape and Structure Prediction of Molecular Glue Ternary Complexes), *May 2026*
+## Honors & Awards
+
+### Research Grants & Fellowships
+- **Caltech Summer Undergraduate Research Fellowship (SURF)**
+  *Electronic Effect-Informed Generative De Novo Drug Design*, *Apr 2026*
+- **Beijing Natural Science Foundation Undergraduate Research Program**
+  *Development and Validation of Deep Learning-Based Virtual Screening Methods for Molecular Glues*, *Jul 2025*
+
+### Competitions
 - **Bohrium+SciMaster×OpenClaw 48-Hour AI for Science Hackathon**
-  Second Prize (Project: GlueBind: A Deep Learning Framework for Large-Scale Molecular Glue Virtual Screening), *Mar 2026*
-- **2024-2025 Peking University Merit Student**
-  *Sep 2025*
-- **2024-2025 Peking University Qin Wanshun Jin Yunhui Scholarship**
-  *Sep 2025*
-- **2025 Beijing Natural Science Foundation Undergraduate Research Program**
-  Development and Validation of Deep Learning-Based Virtual Screening Methods for Molecular Glues, *Jul 2025*
-- **33th Peking University "Challenge Cup" Interdisciplinary Student Extracurricular Academic Science and Technology Works Competition**
+  Second Prize — *GlueBind: A Deep Learning Framework for Large-Scale Molecular Glue Virtual Screening*, *Mar 2026*
+- **33rd Peking University "Challenge Cup" Interdisciplinary Student Extracurricular Academic Science and Technology Works Competition**
   Excellence Award (Team Leader), *May 2025*
-- **International Genetically Engineered Machine (iGEM) 2024**  
-  Gold Medal – Team Peking (Wet Lab Leader), *Oct 2024*
-- **Peking University First Prize Scholarship for Freshmen**
-   MingDe Scholarship, *Dec 2023*
-- **34th International Biology Olympiad (IBO)**  
-  Gold Medal, *Jul 2023*
-- **31st China National Biology Olympiad (CNBO)**  
+- **International Genetically Engineered Machine (iGEM) 2024**
+  Gold Medal — Team Peking (Wet Lab Leader), *Oct 2024*
+- **34th International Biology Olympiad (IBO)**
+  Gold Medal (3rd globally), *Jul 2023*
+- **31st China National Biology Olympiad (CNBO)**
   National Team Member, *Aug 2022*
+
+### Scholarships & Honors
+- **Outstanding Teaching Assistant Award**, School of Life Sciences, Peking University, *Jun 2026*
+- **87 Excellent Research Project Scholarship**, School of Life Sciences, Peking University
+  First Prize — *Computational Landscape and Structure Prediction of Molecular Glue Ternary Complexes*, *May 2026*
+- **Peking University Merit Student** (2024–2025), *Sep 2025*
+- **Qin Wanshun Jin Yunhui Scholarship** (2024–2025), *Sep 2025*
+- **MingDe Scholarship** — First Prize Scholarship for Freshmen, *Dec 2023*
 
 ## Internships
 - **Moonshot AI**  
