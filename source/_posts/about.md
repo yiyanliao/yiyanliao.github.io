@@ -14,7 +14,6 @@ He/Him/His
 I am an undergraduate student majoring in Bioinformatics at the [School of Life Sciences](https://www.bio.pku.edu.cn/en/index/index.html), [Peking University](https://english.pku.edu.cn), P.R.China. Currently, I work on computer-aided drug discovery with [Prof. Luhua Lai](http://mdl.ipc.pku.edu.cn/mdlweb/Lai.html) and [Prof. Jianfeng Pei](http://mdl.ipc.pku.edu.cn/mdlweb/Pei.html) in the [Molecular Design Laboratory](http://mdl.ipc.pku.edu.cn/mdlweb/home.php). I am also an undergraduate research fellow in the [Anima AI+Science Lab](https://tensorlab.cms.caltech.edu/users/anima/index.html) at [Caltech](https://www.caltech.edu), under the supervision of [Prof. Anima Anandkumar](https://www.linkedin.com/in/anima-anandkumar/). Additionally, I am exploring large language models as a researcher in [Prof. Tong Yang](https://yangtonghome.github.io)'s research group. My research focuses on applying artificial intelligence algorithms to structural biology and molecular design, aiming to engineer next-generation therapeutic tools and beyond.
 
 ## Recent News
-- 🆕🎉 [May 2026] My research project, "Computational Landscape and Structure Prediction of Molecular Glue Ternary Complexes," was awarded the First Prize for the 2026 Peking University School of Life Sciences 87 Excellent Research Project Scholarship!
 - [Apr 2026] I was awarded a 2026 [Caltech Summer Undergraduate Research Fellowships (SURF)](https://sfp.caltech.edu/undergraduate-research/programs/surf) award, hosted by [Prof. Anima Anandkumar](https://www.linkedin.com/in/anima-anandkumar/)! See you in Pasadena!
 
 ## Education
@@ -30,7 +29,9 @@ I am an undergraduate student majoring in Bioinformatics at the [School of Life 
 You can find my publications here: [Publications](https://yiyanliao.github.io/Publications).
 
 ## Academic Achievements
-- 🆕🎉 **2026 Peking University School of Life Sciences 87 Excellent Research Project Scholarship**
+- **2026 Outstanding Teaching Assistant Award, School of Life Sciences, Peking University**
+  *Jun 2026*
+- **2026 Peking University School of Life Sciences 87 Excellent Research Project Scholarship**
   First Prize (Project: Computational Landscape and Structure Prediction of Molecular Glue Ternary Complexes), *May 2026*
 - **Bohrium+SciMaster×OpenClaw 48-Hour AI for Science Hackathon**
   Second Prize (Project: GlueBind: A Deep Learning Framework for Large-Scale Molecular Glue Virtual Screening), *Mar 2026*
