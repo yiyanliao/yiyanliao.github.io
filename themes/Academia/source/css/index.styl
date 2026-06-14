@@ -17,6 +17,7 @@ $grey = #76777B;              // Caltech cool gray 9
 $light-grey = #C8C8C8;        // Caltech cool gray 3
 $separator = #e6e6e6;
 $max = 1000px;
+$ease = cubic-bezier(0.22, 0.61, 0.36, 1);
 
 *
   -webkit-text-size-adjust: none;
@@ -31,11 +32,33 @@ body
   margin 0
   padding 0
   background-color #ffffff
+  background-image radial-gradient(1100px 480px at 50% -240px, rgba(249,190,0,0.10), rgba(255,255,255,0) 70%)
+  background-repeat no-repeat
   color $ink-soft
   font-size 1.8em
   line-height 1.7
   font-family $font-family
   scroll-behavior smooth
+
+// warm amber text selection
+::selection
+  background rgba(249,190,0,0.32)
+  color $ink
+
+// keyboard focus rings (accessibility)
+a:focus-visible,
+.cv-button:focus-visible,
+.pub-links a:focus-visible,
+.hero-social:focus-visible
+  outline 2px solid $accent-text
+  outline-offset 3px
+  border-radius 2px
+
+// respect reduced-motion preference
+@media (prefers-reduced-motion: reduce)
+  *
+    animation none !important
+    transition none !important
 
 a, span, .btn
   font-family $font-family
@@ -148,10 +171,12 @@ grow-underline($color)
   font-weight 700
   font-size 1.5rem
   text-decoration none
-  transition background-color 0.2s, color 0.2s
+  transition transform 0.2s $ease, background-color 0.2s $ease, color 0.2s $ease, box-shadow 0.2s $ease
   &:hover
     background $accent-text
     color #fff
+    transform translateY(-1px)
+    box-shadow 0 5px 14px rgba(192,122,14,0.32)
 
 @media (max-width: 40em)
   .cv-button
@@ -177,11 +202,45 @@ grow-underline($color)
   margin 0 auto
   padding 0 2.4rem 4rem
   min-height 60%
-  animation intro 0.3s both
-  animation-delay 0.2s
 
 .page
   width 100%
+
+// staggered page-load reveal
+@keyframes rise
+  from
+    opacity 0
+    transform translateY(14px)
+  to
+    opacity 1
+    transform translateY(0)
+
+.hero-photo,
+.hero-name,
+.hero-tagline,
+.hero-bio,
+.hero-socials,
+.home-body,
+.page-title,
+.page > article
+  animation rise 0.62s $ease both
+
+.hero-photo
+  animation-delay 0.05s
+.hero-name
+  animation-delay 0.13s
+.hero-tagline
+  animation-delay 0.20s
+.hero-bio
+  animation-delay 0.27s
+.hero-socials
+  animation-delay 0.34s
+.home-body
+  animation-delay 0.42s
+.page-title
+  animation-delay 0.06s
+.page > article
+  animation-delay 0.16s
 
 // ============ HERO ============
 .hero
@@ -199,11 +258,12 @@ grow-underline($color)
     height 210px
     object-fit cover
     border-radius 50%
-    box-shadow 0 6px 32px rgba(0,0,0,0.15)
-    transition transform 0.25s ease, box-shadow 0.25s ease
+    border 4px solid #fff
+    box-shadow 0 0 0 1.5px rgba(192,122,14,0.35), 0 14px 34px rgba(120,80,0,0.18)
+    transition transform 0.3s $ease, box-shadow 0.3s $ease
     &:hover
-      transform scale(1.02)
-      box-shadow 0 10px 40px rgba(0,0,0,0.22)
+      transform translateY(-3px) scale(1.02)
+      box-shadow 0 0 0 1.5px rgba(192,122,14,0.55), 0 20px 44px rgba(120,80,0,0.26)
 
 .hero-text
   flex 1 1 auto
@@ -212,8 +272,9 @@ grow-underline($color)
   margin 0 0 0.4rem
   font-size 4.6rem
   font-weight 700
-  letter-spacing 0.2px
-  line-height 1.1
+  letter-spacing -0.015em
+  line-height 1.08
+  text-wrap balance
   color $ink
 
 .hero-tagline
@@ -290,7 +351,10 @@ article
     text-transform uppercase
     margin 3.8rem 0 1.6rem
     padding-bottom 0.7rem
-    border-bottom 3px solid $line
+    background-image linear-gradient(90deg, $accent-text 0, $accent-text 2.8rem, $line 2.8rem)
+    background-repeat no-repeat
+    background-position left bottom
+    background-size 100% 3px
   h1
     font-size 3.2rem
     font-weight 700
@@ -353,11 +417,14 @@ article
   display inline-block
   font-size 3.6rem
   font-weight 700
-  letter-spacing 0.2px
+  letter-spacing -0.01em
   color $ink
   margin 3.2rem 0 0.4rem
   padding-bottom 0.6rem
-  border-bottom 4px solid $line
+  background-image linear-gradient(90deg, $accent-text 0, $accent-text 3.4rem, $line 3.4rem)
+  background-repeat no-repeat
+  background-position left bottom
+  background-size 100% 4px
 
 // ============ PAPER / TALK ROWS ============
 .pub
@@ -368,6 +435,11 @@ article
   border-bottom 1px solid $separator
   &:last-child
     border-bottom 0
+  &:hover .pub-thumb img
+    transform translateY(-3px) scale(1.02)
+    box-shadow 0 12px 26px rgba(0,0,0,0.13)
+  &:hover .pub-title
+    color $accent-text
 
 .pub-thumb
   flex 0 0 200px
@@ -375,6 +447,8 @@ article
     width 100%
     border-radius 8px
     border 1px solid $separator
+    box-shadow 0 1px 3px rgba(0,0,0,0.06)
+    transition transform 0.3s $ease, box-shadow 0.3s $ease
 
 .pub-body
   flex 1 1 auto
@@ -398,6 +472,7 @@ article
   color $ink
   text-decoration none
   position relative
+  transition color 0.2s $ease
   &::after
     content ''
     height 2px
@@ -488,16 +563,20 @@ article
     opacity 1
 .cd-top i
   display block
-  width 38px
-  height 38px
-  line-height 38px
+  width 40px
+  height 40px
+  line-height 40px
   text-align center
-  background $accent
+  background $accent-text
   color #fff
   border-radius 50%
   cursor pointer
-  box-shadow 0 4px 12px rgba(1,111,255,0.35)
+  box-shadow 0 6px 16px rgba(192,122,14,0.4)
   font-size 15px
+  transition transform 0.2s $ease, box-shadow 0.2s $ease
+  &:hover
+    transform translateY(-2px)
+    box-shadow 0 10px 22px rgba(192,122,14,0.5)
 .nav .site-nav, .nav_items
   display none
 
