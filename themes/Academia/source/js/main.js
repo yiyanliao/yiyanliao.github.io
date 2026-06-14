@@ -1,13 +1,4 @@
 $(function () {
-    // resize window
-    $(window).resize(function () {
-        if ($(window).width() < 1280 && $(window).width()>540) {
-            $(".page").css({"width": $(window).width() - $(".side-card").width() - 90, "float": "left"})
-        } else {
-            $(".page").removeAttr("style")
-        }
-    });
-
     // menu
     $(".menus_icon").click(function () {
         if ($(".header_wrap").hasClass("menus-open")) {

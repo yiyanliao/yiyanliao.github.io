@@ -5,6 +5,10 @@ avatar: /img/avatar.jpg
 author: Yiyan Liao
 author_bio: Be a rational poet.
 
+# Short intro shown in the homepage hero (raw HTML allowed)
+intro: |
+  I am an undergraduate student majoring in Bioinformatics at the <a href="https://www.bio.pku.edu.cn/en/index/index.html" target="_blank">School of Life Sciences</a>, <a href="https://english.pku.edu.cn" target="_blank">Peking University</a>, P.R.China. Currently, I work on computer-aided drug discovery with <a href="http://mdl.ipc.pku.edu.cn/mdlweb/Lai.html" target="_blank">Prof. Luhua Lai</a> and <a href="http://mdl.ipc.pku.edu.cn/mdlweb/Pei.html" target="_blank">Prof. Jianfeng Pei</a> in the <a href="http://mdl.ipc.pku.edu.cn/mdlweb/home.php" target="_blank">Molecular Design Laboratory</a>. I am also an undergraduate research fellow in the <a href="https://tensorlab.cms.caltech.edu/users/anima/index.html" target="_blank">Anima AI+Science Lab</a> at <a href="https://www.caltech.edu" target="_blank">Caltech</a>, under the supervision of <a href="https://www.linkedin.com/in/anima-anandkumar/" target="_blank">Prof. Anima Anandkumar</a>. Additionally, I am exploring large language models as a researcher in <a href="https://yangtonghome.github.io" target="_blank">Prof. Tong Yang</a>'s research group. My research focuses on applying artificial intelligence algorithms to structural biology and molecular design, aiming to engineer next-generation therapeutic tools and beyond.
+
 since: 2025
 
 # Top Menu 顶部菜单

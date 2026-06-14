@@ -5,20 +5,8 @@ tags:
 academia: true
 ---
 
-# **Yiyan Liao**
-He/Him/His
-
-> Be a rational poet.
-
-## About Me
-I am an undergraduate student majoring in Bioinformatics at the [School of Life Sciences](https://www.bio.pku.edu.cn/en/index/index.html), [Peking University](https://english.pku.edu.cn), P.R.China. Currently, I work on computer-aided drug discovery with [Prof. Luhua Lai](http://mdl.ipc.pku.edu.cn/mdlweb/Lai.html) and [Prof. Jianfeng Pei](http://mdl.ipc.pku.edu.cn/mdlweb/Pei.html) in the [Molecular Design Laboratory](http://mdl.ipc.pku.edu.cn/mdlweb/home.php). I am also an undergraduate research fellow in the [Anima AI+Science Lab](https://tensorlab.cms.caltech.edu/users/anima/index.html) at [Caltech](https://www.caltech.edu), under the supervision of [Prof. Anima Anandkumar](https://www.linkedin.com/in/anima-anandkumar/). Additionally, I am exploring large language models as a researcher in [Prof. Tong Yang](https://yangtonghome.github.io)'s research group. My research focuses on applying artificial intelligence algorithms to structural biology and molecular design, aiming to engineer next-generation therapeutic tools and beyond.
-
 ## Recent News
 - [Apr 2026] I was awarded a 2026 [Caltech Summer Undergraduate Research Fellowships (SURF)](https://sfp.caltech.edu/undergraduate-research/programs/surf) award, hosted by [Prof. Anima Anandkumar](https://www.linkedin.com/in/anima-anandkumar/)! See you in Pasadena!
-
-## Education
-- **Peking University**, School of Life Sciences  
-  *B.E. in Bioinformatics* (2023 – 2027 expected)
 
 ## Research Interests
 - Computer-aided molecular glue (MG) discovery
@@ -26,7 +14,61 @@ I am an undergraduate student majoring in Bioinformatics at the [School of Life 
 - Structural geometry deep learning & modeling
 - Reasoning & foundation biological large language models (LLMs)
 
-You can find my publications here: [Publications](https://yiyanliao.github.io/Publications).
+## Selected Papers
+
+<div class="pub">
+  <div class="pub-thumb"><img src="https://raw.githubusercontent.com/yiyanliao/yiyanliao.github.io/main/themes/Academia/source/img/MGTbind_TOC.png" alt="MGTbind"></div>
+  <div class="pub-body">
+    <a class="pub-title" href="https://doi.org/10.1093/nar/gkaf1075" target="_blank">MGTbind: a comprehensive database of molecular glue ternary interactome</a>
+    <p class="pub-authors author-toggle-container">
+      <span class="authors-short">Jintao Zhu<sup>†</sup>, <strong>Yiyan Liao</strong><sup>†</sup>, Haoyu Lin<sup>†</sup>, ..., Luhua Lai<sup>*</sup>, Jianfeng Pei<sup>*</sup></span>
+      <span class="authors-full" style="display: none;">Jintao Zhu<sup>†</sup>, <strong>Yiyan Liao</strong><sup>†</sup>, Haoyu Lin<sup>†</sup>, Juan Xie, Zhichao Deng, Jinyu Han, Zhen Zhang, Jinchuan Xiao, Zhiyao Wang, Shuaipeng Zhang, Luhua Lai<sup>*</sup>, Jianfeng Pei<sup>*</sup></span>
+      <span class="toggle-authors">[Show All]</span>
+    </p>
+    <p class="pub-venue">Nucleic Acids Research, 2025</p>
+    <div class="pub-links">
+      <a href="https://doi.org/10.1093/nar/gkaf1075" target="_blank">Paper</a>
+      <a href="https://raw.githubusercontent.com/yiyanliao/yiyanliao.github.io/main/themes/Academia/source/pdf/MGTbind.pdf" target="_blank">PDF</a>
+    </div>
+  </div>
+</div>
+
+<div class="pub">
+  <div class="pub-thumb"><img src="https://raw.githubusercontent.com/yiyanliao/yiyanliao.github.io/main/themes/Academia/source/img/MGBench.png" alt="Benchmarking Cofolding"></div>
+  <div class="pub-body">
+    <a class="pub-title" href="https://doi.org/10.1021/acs.jcim.5c01860" target="_blank">Benchmarking Cofolding Methods for Molecular Glue Ternary Structure Prediction</a>
+    <p class="pub-authors"><strong>Yiyan Liao</strong><sup>†</sup>, Jintao Zhu<sup>†*</sup>, Juan Xie, Luhua Lai<sup>*</sup>, Jianfeng Pei<sup>*</sup></p>
+    <p class="pub-venue">Journal of Chemical Information and Modeling, 2025</p>
+    <div class="pub-links">
+      <a href="https://doi.org/10.1021/acs.jcim.5c01860" target="_blank">Paper</a>
+      <a href="https://raw.githubusercontent.com/yiyanliao/yiyanliao.github.io/main/themes/Academia/source/pdf/benchmarking-cofolding-methods-for-molecular-glue-ternary-structure-prediction.pdf" target="_blank">PDF</a>
+    </div>
+  </div>
+</div>
+
+<p style="margin-top:1.4rem;"><a href="/Publications">See all publications →</a></p>
+
+<script>
+  document.body.addEventListener('click', function(event) {
+    if (event.target.matches('.toggle-authors')) {
+      const button = event.target;
+      const container = button.closest('.author-toggle-container');
+      const shortList = container.querySelector('.authors-short');
+      const fullList = container.querySelector('.authors-full');
+      if (!shortList || !fullList) { return; }
+      const isExpanded = fullList.style.display === 'inline';
+      if (isExpanded) {
+        fullList.style.display = 'none';
+        shortList.style.display = 'inline';
+        button.innerText = '[Show All]';
+      } else {
+        shortList.style.display = 'none';
+        fullList.style.display = 'inline';
+        button.innerText = '[Collapse]';
+      }
+    }
+  });
+</script>
 
 ## Honors & Awards
 
@@ -55,6 +97,10 @@ You can find my publications here: [Publications](https://yiyanliao.github.io/Pu
 - **Peking University Merit Student** (2024–2025), *Sep 2025*
 - **Qin Wanshun Jin Yunhui Scholarship** (2024–2025), *Sep 2025*
 - **MingDe Scholarship** — First Prize Scholarship for Freshmen, *Dec 2023*
+
+## Education
+- **Peking University**, School of Life Sciences  
+  *B.E. in Bioinformatics* (2023 – 2027 expected)
 
 ## Internships
 - **Moonshot AI**  

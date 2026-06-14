@@ -1,7 +1,27 @@
 extends includes/layout
 
 block content
-    .page(itemscope itemtype='http://schema.org/CreativeWork')
-          each article in page.posts.data
-              if article.academia
-                  article!= article.content
+    .page.home
+        section.hero
+            .hero-photo
+                img(src=url_for(theme.avatar) onerror=`this.onerror=null;this.src='` + url_for(theme.loading_bg.flink) + `'` alt=config.author)
+            .hero-text
+                h1.hero-name= config.author
+                if theme.author_bio
+                    p.hero-tagline= theme.author_bio
+                if theme.intro
+                    p.hero-bio!= theme.intro
+                .hero-socials
+                    if theme.social.enable
+                        each url, icon in theme.social_links
+                            - var isMail = (icon.indexOf('envelope') !== -1)
+                            a.hero-social(href=(isMail ? 'mailto:' + url : url) target=(isMail ? '_self' : '_blank'))
+                                i(class=icon aria-hidden="true")
+                    if theme.e_social.enable
+                        each value, name in theme.e_social_links
+                            a.hero-social(href=url_for(trim(value.split('||')[0])) target="_blank" title=name)
+                                i(class=trim(value.split('||')[1]) aria-hidden="true")
+        .home-body
+            each article in page.posts.data
+                if article.academia
+                    article!= article.content

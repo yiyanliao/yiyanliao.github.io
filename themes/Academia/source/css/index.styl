@@ -1,737 +1,520 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 @import 'user'
 @import '_highlight/highlight.styl'
-@import 'user'
-@import '_highlight/highlight.styl'
 
-$font-family = 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$theme-blue = #1353d7;
-$theme-dark-blue = #096494;
-$theme-red = #c62641;
+// ---- Hannes-style design tokens ----
+$font-family = 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+$mono = "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+
+$accent = #F9BE00;            // theme color (yellow)
+$accent-dark = #d9a400;       // darker yellow for borders / hover
+$accent-text = #C07A0E;       // warm amber-gold — text/nav (prettier than olive gold)
+$line = #F9BE00;              // theme yellow — solid section underline lines
+$ink = #1d1d1f;
+$ink-soft = #2f3133;
+$grey = #76777B;              // Caltech cool gray 9
+$light-grey = #C8C8C8;        // Caltech cool gray 3
+$separator = #e6e6e6;
+$max = 1000px;
 
 *
   -webkit-text-size-adjust: none;
-
-html
-  height: 100%
-  margin 0
-  font-size: 62.5%;
-  -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 
+html
+  margin 0
+  font-size: 62.5%;
+
 body
-  height 100%
-  margin: 0;
-  padding: 0;
-  background-color: #ffffff;
-  color: #494e52;
-  font-size: 1.8em;
-  line-height: 1.5;
-  font-family: $font-family
+  min-height 100vh
+  margin 0
+  padding 0
+  background-color #ffffff
+  color $ink-soft
+  font-size 1.8em
+  line-height 1.7
+  font-family $font-family
   scroll-behavior smooth
 
-a,
-span,
-.btn
-  font-family: $font-family
+a, span, .btn
+  font-family $font-family
 
 img
   max-width 100%
 
 blockquote
-  position: relative;
-  color: #666;
-  font-style: italic;
-  background-color transparent;
-  border-left: 4px solid $theme-blue;
-  padding: 1rem 1rem 1rem 2rem;
-  margin: 1.5rem 0;
+  position relative
+  color $grey
+  font-style italic
+  background-color transparent
+  border-left 3px solid $accent
+  padding 0.4rem 1rem 0.4rem 1.6rem
+  margin 1.4rem 0
   p
     margin 0
 
-// top menu
-//------------------------------------------------
+// reusable growing-underline link (Hannes link-style)
+grow-underline($color)
+  color $color
+  text-decoration none
+  position relative
+  &::after
+    content ''
+    height 2px
+    position absolute
+    bottom -1px
+    left 0
+    width 0%
+    background $color
+    transition width 0.2s ease
+  &:hover::after
+    width 100%
+
+// ============ TOP HEADER ============
 #page_header
-  position: relative;
-  border-bottom: 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  -webkit-animation: intro 0.3s both;
-  animation: intro 0.3s both;
-  -webkit-animation-delay: 0.15s;
-  animation-delay: 0.15s;
-  z-index: 20;
+  position sticky
+  top 0
+  background rgba(255,255,255,0.95)
+  backdrop-filter saturate(180%) blur(10px)
+  border-bottom 1px solid $separator
+  z-index 50
+  -webkit-animation intro 0.3s both
+  animation intro 0.3s both
 
 .header_wrap
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  clear: both;
-  padding: 1.6rem 2rem 1rem;
-  font-size: 2rem;
+  max-width $max
+  margin 0 auto
+  display flex
+  align-items center
+  justify-content space-between
+  padding 0.7rem 2.4rem
+  font-size 1.6rem
 
 #blog_name
-  display inline-block
-  width auto
-  vertical-align top
-
   a
-    display: block;
-    margin: 0 1.6rem;
-    padding: 0.8rem 0;
-    color: #7a8288;
-    font-weight: 600;
-    text-decoration: none;
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
+    display block
+    padding 0.6rem 0
+    color $accent-text
+    font-weight 700
+    font-size 1.85rem
+    letter-spacing 0.2px
+    text-decoration none
+    transition opacity 0.2s
     &:hover
-      color: black;
+      opacity 0.7
 
-@media (max-width: 34em)
-  .menus-open .menus_items
-    visibility visible
-    opacity 1
-    pointer-events auto
+.nav-right
+  display flex
+  align-items center
 
-  .menus_items
-    visibility hidden
-    opacity 0
-    position: absolute;
-    right: 10px;
-    margin: 0;
-    box-shadow: rgba(0,0,0,0.25) 0px 0px 10px;
-    padding: 5px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #f2f3f3;
-    border-image: initial;
-    border-radius: 4px;
-    background: #fff;
-    list-style: none;
-    transition: all ease-in-out 0.2s;
-    pointer-events none
-    &::before
-      display: block;
-      content: "";
-      position: absolute;
-      top: -10px;
-      left: calc(50% + 15px);
-      width: 0px;
-      z-index: 0;
-      border-style: solid;
-      border-width: 0px 10px 10px;
-      border-color: white transparent;
-    li
-      display: block;
-      border-bottom: 1px solid #f2f3f3;
-      a
-        display: block;
-        color: #7a8288;
-        font-size: 1.6rem;
-        margin: 0px;
-        padding: 8px 15px;
-        text-decoration: none;
-        transition: all 0.2s ease-in-out 0s;
+.menus_items
+  display flex
+  align-items center
+  list-style none
+  margin 0
+  padding 0
+  li
+    display inline-block
+    a
+      position relative
+      display block
+      margin 0 0 0 2.4rem
+      padding 0.6rem 0
+      color $accent-text
+      font-weight 700
+      font-size 1.6rem
+      text-decoration none
+      &::before
+        content ''
+        position absolute
+        left 0
+        bottom 0
+        height 3px
+        width 100%
+        background $accent-text
+        transform scaleX(0)
+        transform-origin left
+        transition transform 0.2s ease
+      &:hover::before
+        transform scaleX(1)
+
+.cv-button
+  margin-left 2.4rem
+  padding 0.5rem 1.4rem
+  border 2px solid $accent-text
+  border-radius 6px
+  color $accent-text
+  font-weight 700
+  font-size 1.5rem
+  text-decoration none
+  transition background-color 0.2s, color 0.2s
+  &:hover
+    background $accent-text
+    color #fff
+
+@media (max-width: 40em)
+  .cv-button
+    margin-left 1.2rem
+    padding 0.4rem 1rem
+    font-size 1.35rem
 
 .menus_icon
-  display inline-block
-  position: absolute;
-  right: 30px;
-  top: 22px;
-  height: 30px;
-  width: 30px;
-  background-color: $theme-blue;
-  color: #fff;
-  cursor: pointer;
-  padding: 0px 0.3rem;
-  border-width: 0px;
-  outline: none
-
-.menus-open .navicon
-  background: transparent;
-  &::before
-    transform-origin: 50% 50%;
-    top: 0px;
-    left: -3px;
-    width: 25px;
-    transform: rotate3d(0, 0, 1, 45deg);
-  &::after
-    transform-origin: 50% 50%;
-    top: 0px;
-    left: -3px;
-    width: 25px;
-    transform: rotate3d(0, 0, 1, -45deg);
-
-@media (min-width: 34em)
-  .menus_items
-    display inline-block
-    list-style-type none
-    margin 0
-    clear both
-    li
-      display table-cell
-      vertical-align middle
-      a
-        position: relative;
-        display: block;
-        margin: 0 1.6rem;
-        padding: 0.8rem 0;
-        color: #494e52;
-        text-decoration: none;
-        &::before
-          content: "";
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          height: 4px;
-          background: $theme-blue;
-          width: 100%;
-          -webkit-transition: all 0.2s ease-in-out;
-          transition: all 0.2s ease-in-out;
-          -webkit-transform: scaleX(0);
-          -ms-transform: scaleX(0);
-          transform: scaleX(0);
-        &:hover
-          color: $theme-blue;
-          &::before
-            -webkit-transform: scaleX(1);
-            -ms-transform: scaleX(1);
-            transform: scaleX(1);
-
-  .menus_icon
-    display none
-
-
-// page main
-//------------------------------------------------
-#page_main
-  min-height: 72%;
-  margin-left: auto;
-  margin-right: auto;
-  clear: both;
-  margin-top: 3.2rem;
-  margin-bottom: 6.4rem;
-  padding-left: 1.6rem;
-  padding-right: 1.6rem;
-  animation: intro 0.3s both;
-  animation-delay: 0.35s;
-  &::after
-    clear: both;
-    content: "";
-    display: table;
-
-.page-title
-  font-size 3rem
-  padding 0 1.2rem
-
-.page article
-  padding-left 1.2rem
-  padding-right 1.2rem
-
-  h1
-    font-size 3rem
-  h2
-    font-size 2.8rem
-  h3
-    font-size 2.6rem
-  p,
-  li
-    font-size 1.8rem
-  a
-    color $theme-blue
-    text-decoration none
-    border-bottom 1px solid $theme-blue
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-    &:hover
-      color: $theme-red;
-      border-bottom-color: $theme-red;
-
-  .highlight
-    overflow: auto;
-    margin: 0 0 1rem;
-    padding: 0;
-    background: #f8f8f8;
-    color: #525252;
-    line-height: 20px;
-
-  .gutter pre
-    padding-right: 0.8rem;
-    padding-left: 0.7rem;
-    background-color: #f8f8f8;
-    color: #cfd8dc;
-    text-align: right;
-
-  code
-    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    padding: 0.2rem 0.4rem;
-    margin: 0 0.1rem;
-    background: #f3f4f6;
-    border-radius: 4px;
-    font-size: 0.9em;
-    color: #494e52;
-    word-wrap: break-word;
-
-@media screen and (min-width: 66.67em)
-  #page_main
-    max-width: 1200px;
-
-@media (min-width: 34em)
-  .page
-    width: 82.5%;
-    float: right;
-    margin-right: 0;
-    if hexo-config('box_shadow') && hexo-config('box_shadow.enable')
-      -webkit-box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
-      box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
-    .page-title
-      padding 0 3.6rem
-    article
-      padding 0 3.6rem 3.6rem;
-
-
-// sidebar
-//------------------------------------------------
-.side-card
-  clear: both;
-  margin-bottom: 1.6rem;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  .card-wrap
-    padding-left: 10px;
-  img
-    width: 100%;
-  p,
-  li
-    font-size: 1.4rem;
-    line-height: 1.5;
-
-.author-avatar
-  display: table-cell;
-  vertical-align: top;
-  width: 40px;
-  height: 40px;
-  img
-    width: 100%;
-    max-width: 110px;
-    border-radius: 50%;
-
-.author-discrip
-  display: table-cell;
-  vertical-align: top;
-  padding-left: 15px;
-  padding-right: 15px;
-  line-height: 1;
-  h3
-    margin: 0px;
-    font-size 1.8rem
-  .author-bio
-    font-size: 1.2rem;
-    margin: .3rem 0;
-
-.author-links
-  display: table-cell;
-  position: relative;
-  vertical-align: top;
-  z-index: 10;
-  cursor: pointer;
-  li
-    white-space: nowrap;
-    margin-bottom: 0.5em;
-  a
-    margin-bottom: 5px;
-    padding-right: 5px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    color: inherit;
-    font-size: 1.4rem;
-    text-decoration: none;
-  button
-    margin-bottom: 0px;
-
-.btn
-  display: inline-block;
-  margin-bottom: 0.25em;
-  font-size: 0.75em;
-  font-weight: bold;
-  text-align: center;
-  background-color: rgb(122, 130, 136);
-  cursor: pointer;
-  color: rgb(255, 255, 255) !important;
-  padding: 0.6em 1em;
-  text-decoration: none;
-  border-radius: 4px;
-  border-width: 0px !important;
-  border-style: initial !important;
-  border-color: initial !important;
-  border-image: initial !important;
-  &:hover
-    background-color: rgb(51, 51, 51);
-
-.m-social-links
-  background-color: rgb(255, 255, 255);
-  color: rgb(122, 130, 136) !important;
-  border-width: 1px !important;
-  border-style: solid !important;
-  border-color: rgb(189, 193, 196) !important;
-  border-image: initial !important;
-  &:hover
-    color: rgb(255, 255, 255) !important;
-
-.social-icons
-  visibility hidden
-  opacity 0
-  position: absolute;
-  right: 0;
-  width: 115px;
-  margin-top: 15px;
-  padding-top: 8px;
-  padding-left: 10px;
-  list-style-type: none;
-  border: 1px solid #f2f3f3;
-  border-radius: 4px;
-  background: #fff;
-  z-index: -1;
-  box-shadow: 0 0 10px rgba(0,0,0,0.25);
-  cursor: default;
-  transition: all ease-in-out 0.2s;
-  &::before
-    display: block;
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: calc(50% + 15px);
-    width: 0px;
-    z-index: 0;
-    border-style: solid;
-    border-width: 0px 10px 10px;
-    border-color: rgb(255, 255, 255) transparent;
-    transition: all 0.2s ease-in-out;
-  a
-    font-size 1.7rem
-  li
-    display: inline-block;
-  .fa,
-  .fas,
-  .fab
-    display: inline-block;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: black;
-    width: 1.28571em;
-    text-align: center;
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-    &:hover
-      color: $theme-red;
-
-.is-open .social-icons
-  visibility visible
-  opacity 1
-
-.social-links
   display none
-  list-style-type none
-  cursor default
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
 
-  .e-social-link
-    color black
-    .fa,
-    .fas,
-    .fab
-      padding-right 0.5rem
-    &:hover span
-      text-decoration underline
+@media (max-width: 40em)
+  .header_wrap
+    padding 0.6rem 1.4rem
+  .menus_items li a
+    margin 0 0 0 1.4rem
+    font-size 1.4rem
+  #blog_name a
+    font-size 1.5rem
 
-.cv-links
-  color: $theme-dark-blue !important
-  display: inline-block;
-  position: relative;
-  font-size: 1.4rem;
-  margin-left: 5.5rem;
-  i
-    text-decoration: underline;
-    &::before
-      margin-right: .5rem
+// ============ MAIN ============
+#page_main
+  max-width $max
+  margin 0 auto
+  padding 0 2.4rem 4rem
+  min-height 60%
+  animation intro 0.3s both
+  animation-delay 0.2s
 
+.page
+  width 100%
 
-@media (min-width: 66.67em)
-  .side-card
-    padding-right: 0;
+// ============ HERO ============
+.hero
+  display flex
+  align-items flex-start
+  gap 3.2rem
+  padding 4rem 0 2.4rem
 
-@media (min-width: 34em)
-  .side-card
-    width: 15.25424%;
-    min-width: 165px;
-    float: left;
-    margin-right: 1.69492%;
-    opacity: 1;
-    -webkit-transition: opacity 0.2s ease-in-out;
-    transition: opacity 0.2s ease-in-out;
-    if hexo-config('box_shadow') && hexo-config('box_shadow.enable')
-      -webkit-box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
-      box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
-    .card-wrap
-      padding: 10px 10px 10px 17px;
-
-  .sticky
-    clear: both;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 2em;
-    &>*
-      display: block;
-
-  .author-avatar
-    display: block;
-    width: auto;
-    height: auto;
-    text-align: center;
-    img
-      padding: 5px;
-      border: 1px solid #f2f3f3;
-
-  .author-discrip
-    display: block;
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-    color: black;
-    .author-bio
-      font-size: 1.4rem
-      margin-top: 8px;
-      margin-bottom: 10px;
-
-  .author-links
-    display: block;
-
-  .social-icons
-    display: block;
-    visibility visible
-    opacity 1
-    position: relative;
-    width: auto;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    background: transparent;
-    box-shadow: none;
-    &::before
-      content none
-
-  .m-social-links
-    display none
-
-  .social-links
-    display block
-    margin-top .8rem
-    margin-bottom 1.6rem
-    padding 0
-
-  .cv-links
-    margin: 0;
-
-// footer
-//------------------------------------------------
-#page_footer
-  clear: both;
-  height: 100px
-  width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
-  //margin-top: -100px;
-  color: #9ba1a6;
-  -webkit-animation: intro 0.3s both;
-  animation: intro 0.3s both;
-  -webkit-animation-delay: 0.45s;
-  animation-delay: 0.45s;
-  background-color: #f2f3f3;
-  border-top: 1px solid #bdc1c4;
-  a
-    color: #9ba1a6;
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
+.hero-photo
+  flex 0 0 auto
+  position sticky
+  top 8rem
+  img
+    width 210px
+    height 210px
+    object-fit cover
+    border-radius 50%
+    box-shadow 0 6px 32px rgba(0,0,0,0.15)
+    transition transform 0.25s ease, box-shadow 0.25s ease
     &:hover
-      color: black;
+      transform scale(1.02)
+      box-shadow 0 10px 40px rgba(0,0,0,0.22)
+
+.hero-text
+  flex 1 1 auto
+
+.hero-name
+  margin 0 0 0.4rem
+  font-size 4.6rem
+  font-weight 700
+  letter-spacing 0.2px
+  line-height 1.1
+  color $ink
+
+.hero-tagline
+  margin 0.2rem 0 1.4rem
+  color $grey
+  font-size 1.8rem
+  font-style italic
+
+.hero-bio
+  margin 0 0 1.8rem
+  font-size 1.7rem
+  line-height 1.7
+  color $ink-soft
+  a
+    color $accent-text
+    font-weight 600
+    text-decoration none
+    position relative
+    &::after
+      content ''
+      height 2px
+      position absolute
+      bottom -1px
+      left 0
+      width 0
+      background $accent
+      transition width 0.2s ease
+    &:hover::after
+      width 100%
+
+.hero-socials
+  display flex
+  flex-wrap wrap
+  align-items center
+  gap 1.8rem
+
+.hero-social
+  color $grey
+  font-size 2.2rem
+  line-height 1
+  text-decoration none
+  transition color 0.2s, transform 0.2s
+  &:hover
+    color $accent-text
+    transform translateY(-2px)
+
+@media (max-width: 46em)
+  .hero
+    flex-direction column
+    text-align center
+    gap 1.6rem
+    padding 3rem 0 1.6rem
+  .hero-photo img
+    width 180px
+    height 180px
+  .hero-name
+    font-size 3.4rem
+  .hero-socials
+    justify-content center
+
+// ============ ARTICLE BODY ============
+.home-body,
+.page > article
+  margin-top 1.2rem
+
+article
+  // section headers (markdown ## ) -> dark bold left-title with yellow underline
+  h2,
+  .section-title
+    color $ink
+    font-weight 700
+    font-size 2.1rem
+    letter-spacing 1px
+    text-transform uppercase
+    margin 3.8rem 0 1.6rem
+    padding-bottom 0.7rem
+    border-bottom 3px solid $line
+  h1
+    font-size 3.2rem
+    font-weight 700
+    color $ink
+    margin 2rem 0 1rem
+  h3
+    font-size 2rem
+    font-weight 600
+    color $ink
+    margin 2rem 0 0.6rem
+  h4
+    font-size 1.75rem
+    font-weight 600
+    color $ink
+    margin 1.6rem 0 0.5rem
+  p, li
+    font-size 1.75rem
+  ul
+    padding-left 2rem
+  li
+    margin-bottom 0.5rem
+  strong, b
+    font-weight 700
+    color $ink
+  a
+    color $accent-text
+    font-weight 600
+    text-decoration none
+    position relative
+    &::after
+      content ''
+      height 2px
+      position absolute
+      bottom -1px
+      left 0
+      width 0
+      background $accent
+      transition width 0.2s ease
+    &:hover::after
+      width 100%
+  hr
+    border 0
+    border-top 1px solid $separator
+    margin 1.6rem 0
+  code
+    font-family $mono
+    padding 0.2rem 0.5rem
+    background #f4f5f6
+    border-radius 4px
+    font-size 0.88em
+    color $ink-soft
+  .highlight
+    overflow auto
+    margin 0 0 1rem
+    background #f8f8f8
+    line-height 1.45
+
+// page title for sub-pages (Publications, Talk Slides)
+.page-title
+  display inline-block
+  font-size 3.6rem
+  font-weight 700
+  letter-spacing 0.2px
+  color $ink
+  margin 3.2rem 0 0.4rem
+  padding-bottom 0.6rem
+  border-bottom 4px solid $line
+
+// ============ PAPER / TALK ROWS ============
+.pub
+  display flex
+  align-items flex-start
+  gap 1.8rem
+  padding 1.6rem 0
+  border-bottom 1px solid $separator
+  &:last-child
+    border-bottom 0
+
+.pub-thumb
+  flex 0 0 200px
+  img
+    width 100%
+    border-radius 8px
+    border 1px solid $separator
+
+.pub-body
+  flex 1 1 auto
+  min-width 0
+
+@media (max-width: 46em)
+  .pub
+    flex-direction column
+    gap 1rem
+  .pub-thumb
+    flex none
+    width 100%
+    max-width 320px
+
+.pub-title
+  display inline-block
+  margin 0 0 0.5rem
+  font-size 1.9rem
+  font-weight 600
+  line-height 1.4
+  color $ink
+  text-decoration none
+  position relative
+  &::after
+    content ''
+    height 2px
+    position absolute
+    bottom -1px
+    left 0
+    width 0
+    background $accent
+    transition width 0.2s ease
+  &:hover::after
+    width 100%
+
+.pub-authors
+  margin 0.3rem 0
+  color $grey
+  font-size 1.55rem
+  line-height 1.5
+  strong
+    color $ink
+
+.pub-venue
+  margin 0.3rem 0 0.9rem
+  font-style italic
+  color $ink-soft
+  font-size 1.55rem
+
+.toggle-authors
+  cursor pointer
+  color $accent-text
+  font-weight 700
+  margin-left 4px
+  &:hover
+    text-decoration underline
+
+.pub-links
+  display flex
+  flex-wrap wrap
+  gap 0.8rem
+  margin-top 0.6rem
+  a
+    display inline-block
+    padding 0.4rem 1.3rem
+    border 1.5px solid $accent-dark
+    color $ink
+    border-radius 20px
+    font-size 1.4rem
+    font-weight 700
+    text-decoration none
+    transition background-color 0.2s, color 0.2s
+    &:hover
+      background-color $accent
+      color $ink
+
+
+// ============ FOOTER ============
+#page_footer
+  border-top 1px solid $separator
+  color $grey
+  background #fafafa
+  animation intro 0.3s both
+  animation-delay 0.35s
+  a
+    color $grey
+    text-decoration none
+    transition color 0.2s
+    &:hover
+      color $accent
 
 .footer_wrap
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  clear: both;
-  margin-top: 2em;
-  padding-left: 2.5em;
-  font-size: 1.28rem;
+  max-width $max
+  margin 0 auto
+  padding 1.4rem 2.4rem
+  font-size 1.25rem
+  text-align center
+  color $grey
 
-@media (min-width: 66.67em)
-  .footer_wrap
-    max-width: 1200px;
-
-@media (min-width: 34em)
-  .footer_wrap
-    padding: 0 1em 2em;
-
-// mobile-nav
-//------------------------------------------------
+// ============ MOBILE BACK-TO-TOP / NAV ============
 .nav-wrap
   position fixed
-  bottom 220px
-  right 0
-  max-width 50px
+  bottom 40px
+  right 18px
+  z-index 40
   visibility hidden
   opacity 0
-  transition: all .3s;
-  -webkit-transition: all .3s;
-  -moz-transition: all .3s;
+  transition all .3s
   &.is-visible
     visibility visible
     opacity 1
-    pointer-events auto
-
-.nav
-  height 30px
-  width 30px
-
-.site-nav
-  position: absolute;
-  height: 30px;
-  width: 30px;
-  background-color: rgb(122, 130, 136);
-  color: rgb(255, 255, 255);
-  cursor: pointer;
-  padding: 0px 0.3rem;
-  border-width: 0px;
-  border-style: initial;
-  border-color: initial;
-  border-image: initial;
-  outline: none;
-
-.navicon
-  position: relative;
-  width: 18px;
-  height: 3px;
-  background: rgb(255, 255, 255);
-  margin: auto;
-  transition: all 0.3s ease 0s;
-  &::before
-    content: "";
-    position: absolute;
-    top: -8px;
-    left: 0px;
-    width: 18px;
-    height: 3px;
-    background: rgb(255, 255, 255);
-    transition: all 0.3s ease 0s;
-  &::after
-    content: "";
-    position: absolute;
-    bottom: -8px;
-    left: 0px;
-    width: 18px;
-    height: 3px;
-    background: rgb(255, 255, 255);
-    transition: all 0.3s ease 0s;
-
-.nav-open .navicon
-  background: transparent;
-  &::before
-    transform-origin: 50% 50%;
-    top: 0px;
-    left: -3px;
-    width: 25px;
-    transform: rotate3d(0, 0, 1, 45deg);
-  &::after
-    transform-origin: 50% 50%;
-    top: 0px;
-    left: -3px;
-    width: 25px;
-    transform: rotate3d(0, 0, 1, -45deg);
-
-.nav_items
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  right: 45px;
-  top: -20px;
-  margin: 0;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 10px;
-  padding: 5px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: rgb(242, 243, 243);
-  border-image: initial;
-  border-radius: 4px;
-  background: rgb(255, 255, 255);
-  list-style: none;
-  transition: all ease-in-out 0.2s;
-  li
-    display: block;
-    border-bottom: 1px solid rgb(242, 243, 243);
-    a
-      display: block;
-      color: rgb(122, 130, 136);
-      font-size: 1.6rem;
-      margin: 0px;
-      padding: 10px 20px;
-      text-decoration: none;
-      transition: all 0.2s ease-in-out 0s;
-      &:hover
-        color: rgb(92, 98, 102);
-        background: rgb(222, 224, 225);
-  &::before
-    content: "";
-    position: absolute;
-    top: 20px;
-    right: -10px;
-    width: 0px;
-    display: block;
-    z-index: 0;
-    border-style: solid;
-    border-width: 10px 0px 10px 10px;
-    border-color: transparent transparent transparent white;
-  &::after
-    clear: both;
-    content: "";
-    display: table;
-
-.nav-open .nav_items
-  visibility visible
-  opacity 1
-
-.cd-top
+.cd-top i
   display block
-  width auto
-  height auto
-  i
-    display: block;
-    margin-top: 3px;
-    width: 30px;
-    height: 30px;
-    background-color: #7a8288;
-    color: #fff;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    line-height: 29px;
-    cursor: pointer;
+  width 38px
+  height 38px
+  line-height 38px
+  text-align center
+  background $accent
+  color #fff
+  border-radius 50%
+  cursor pointer
+  box-shadow 0 4px 12px rgba(1,111,255,0.35)
+  font-size 15px
+.nav .site-nav, .nav_items
+  display none
 
+// ============ INTRO ANIMATION ============
+@keyframes intro
+  from
+    opacity 0
+    transform translateY(8px)
+  to
+    opacity 1
+    transform translateY(0)
 
-// scrollbar
-//------------------------------------------------
+// ============ SCROLLBAR ============
 ::-webkit-scrollbar
-  width: 12px;
-  height: 8px;
-  background-color: white;
-
-::-webkit-scrollbar-track
-  //border-radius: 10px;
-  background-color: white;
-
+  width 11px
+  height 8px
+  background-color #fff
 ::-webkit-scrollbar-thumb
-  //border-radius: 10px;
-  background-color: rgba(122, 130, 136, 0.4);
+  background-color rgba(128,128,128,0.4)
+  border-radius 6px
