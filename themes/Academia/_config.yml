@@ -11,6 +11,11 @@ intro: |
 
 since: 2025
 
+# Cloudflare Web Analytics — paste your beacon token here to enable the
+# visitor map (view it at dash.cloudflare.com → Analytics → Web Analytics).
+# Leave empty to disable. The page stays fast; only a tiny ~3KB script loads.
+cloudflare_token: '882c7b2de18d4f65945ffc24fde9baec'
+
 # Top Menu 顶部菜单
 # #title 为页内跳转，单页模式
 # 可以选择外链或其他页面

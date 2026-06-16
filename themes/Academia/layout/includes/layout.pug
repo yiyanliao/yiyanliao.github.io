@@ -9,6 +9,8 @@ html(lang=config.language)
         !=favicon_tag(config.favicon || theme.favicon || '/favicon.ico')
         each item in theme.CDN_USE.css
             link(rel='stylesheet', href=url_for(item))
+        if theme.cloudflare_token
+            script(defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon=`{"token": "${theme.cloudflare_token}"}`)
     body
         header#page_header
             include ./header.pug
