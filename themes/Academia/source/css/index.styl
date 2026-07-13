@@ -321,6 +321,22 @@ grow-underline($color)
     color $accent-text
     transform translateY(-2px)
 
+// low-key Google Scholar metrics line
+.hero-scholar
+  display inline-flex
+  align-items center
+  gap 0.55rem
+  margin 1.4rem 0 0
+  color $grey
+  font-size 1.45rem
+  text-decoration none
+  transition color 0.2s
+  i
+    color $accent-text
+    font-size 1.3rem
+  &:hover
+    color $accent-text
+
 @media (max-width: 46em)
   .hero
     flex-direction column
@@ -525,6 +541,60 @@ article
     &:hover
       background-color $accent
       color $ink
+
+// "Cite" button — matches the pill links but is a <button>
+.cite-btn
+  padding 0.4rem 1.3rem
+  border 1.5px solid $accent-dark
+  background transparent
+  color $ink
+  border-radius 20px
+  font-size 1.4rem
+  font-weight 700
+  font-family $font-family
+  cursor pointer
+  transition background-color 0.2s, color 0.2s
+  &:hover
+    background-color $accent
+    color $ink
+
+// BibTeX drawer
+.cite-box
+  position relative
+  margin 0.9rem 0 0.2rem
+  &[hidden]
+    display none
+  pre
+    margin 0
+    padding 1.1rem 3.4rem 1.1rem 1.3rem
+    background #f8f8f8
+    border 1px solid $separator
+    border-left 3px solid $accent
+    border-radius 8px
+    overflow-x auto
+    font-family $mono
+    font-size 1.3rem
+    line-height 1.55
+    color $ink-soft
+    white-space pre
+
+.cite-copy
+  position absolute
+  top 0.7rem
+  right 0.7rem
+  padding 0.25rem 0.9rem
+  border 1px solid $accent-dark
+  background rgba(255,255,255,0.92)
+  color $accent-text
+  border-radius 6px
+  font-size 1.2rem
+  font-weight 700
+  font-family $font-family
+  cursor pointer
+  transition background-color 0.2s, color 0.2s
+  &:hover
+    background $accent
+    color $ink
 
 
 // ============ FOOTER ============

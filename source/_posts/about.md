@@ -26,7 +26,17 @@ academia: true
     <div class="pub-links">
       <a href="https://arxiv.org/abs/2606.25865" target="_blank">Paper</a>
       <a href="/pdf/Molexar.pdf" target="_blank">PDF</a>
+      <button class="cite-btn" type="button">Cite</button>
     </div>
+    <div class="cite-box" hidden><button class="cite-copy" type="button" data-label="Copy">Copy</button><pre>@misc{lin2026molexar,
+  title={Molexar: A Unified Multimodal Molecular Foundation Model for Drug Design},
+  author={Lin, Haoyu and Liao, Yiyan and Pan, Jinmei and Ling, Xinliao and Lai, Luhua and Pei, Jianfeng},
+  year={2026},
+  eprint={2606.25865},
+  archivePrefix={arXiv},
+  primaryClass={q-bio.BM},
+  url={https://arxiv.org/abs/2606.25865}
+}</pre></div>
   </div>
 </div>
 
@@ -39,11 +49,23 @@ academia: true
       <span class="authors-full" style="display: none;">Jintao Zhu<sup>†</sup>, <strong>Yiyan Liao</strong><sup>†</sup>, Haoyu Lin<sup>†</sup>, Juan Xie, Zhichao Deng, Jinyu Han, Zhen Zhang, Jinchuan Xiao, Zhiyao Wang, Shuaipeng Zhang, Luhua Lai<sup>*</sup>, Jianfeng Pei<sup>*</sup></span>
       <span class="toggle-authors">[Show All]</span>
     </p>
-    <p class="pub-venue">Nucleic Acids Research, 2025</p>
+    <p class="pub-venue">Nucleic Acids Research, 2026</p>
     <div class="pub-links">
       <a href="https://doi.org/10.1093/nar/gkaf1075" target="_blank">Paper</a>
       <a href="/pdf/MGTbind.pdf" target="_blank">PDF</a>
+      <button class="cite-btn" type="button">Cite</button>
     </div>
+    <div class="cite-box" hidden><button class="cite-copy" type="button" data-label="Copy">Copy</button><pre>@article{zhu2026mgtbind,
+  title={MGTbind: a comprehensive database of molecular glue ternary interactome},
+  author={Zhu, Jintao and Liao, Yiyan and Lin, Haoyu and Xie, Juan and Deng, Zhichao and Han, Jinyu and Zhang, Zhen and Xiao, Jinchuan and Wang, Zhiyao and Zhang, Shuaipeng and Lai, Luhua and Pei, Jianfeng},
+  journal={Nucleic Acids Research},
+  volume={54},
+  number={D1},
+  pages={D1500--D1509},
+  year={2026},
+  publisher={Oxford University Press},
+  doi={10.1093/nar/gkaf1075}
+}</pre></div>
   </div>
 </div>
 
@@ -56,33 +78,23 @@ academia: true
     <div class="pub-links">
       <a href="https://doi.org/10.1021/acs.jcim.5c01860" target="_blank">Paper</a>
       <a href="/pdf/benchmarking-cofolding-methods-for-molecular-glue-ternary-structure-prediction.pdf" target="_blank">PDF</a>
+      <button class="cite-btn" type="button">Cite</button>
     </div>
+    <div class="cite-box" hidden><button class="cite-copy" type="button" data-label="Copy">Copy</button><pre>@article{liao2025benchmarking,
+  title={Benchmarking Cofolding Methods for Molecular Glue Ternary Structure Prediction},
+  author={Liao, Yiyan and Zhu, Jintao and Xie, Juan and Lai, Luhua and Pei, Jianfeng},
+  journal={Journal of Chemical Information and Modeling},
+  volume={65},
+  number={20},
+  pages={11136--11148},
+  year={2025},
+  publisher={American Chemical Society},
+  doi={10.1021/acs.jcim.5c01860}
+}</pre></div>
   </div>
 </div>
 
 <p style="margin-top:1.4rem;"><a href="/Publications">See all publications →</a></p>
-
-<script>
-  document.body.addEventListener('click', function(event) {
-    if (event.target.matches('.toggle-authors')) {
-      const button = event.target;
-      const container = button.closest('.author-toggle-container');
-      const shortList = container.querySelector('.authors-short');
-      const fullList = container.querySelector('.authors-full');
-      if (!shortList || !fullList) { return; }
-      const isExpanded = fullList.style.display === 'inline';
-      if (isExpanded) {
-        fullList.style.display = 'none';
-        shortList.style.display = 'inline';
-        button.innerText = '[Show All]';
-      } else {
-        shortList.style.display = 'none';
-        fullList.style.display = 'inline';
-        button.innerText = '[Collapse]';
-      }
-    }
-  });
-</script>
 
 ## Honors & Awards
 

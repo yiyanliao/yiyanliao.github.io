@@ -21,6 +21,10 @@ block content
                         each value, name in theme.e_social_links
                             a.hero-social(href=url_for(trim(value.split('||')[0])) target="_blank" title=name)
                                 i(class=trim(value.split('||')[1]) aria-hidden="true")
+                if site.data.scholar && site.data.scholar.citations
+                    a.hero-scholar(href="https://scholar.google.com/citations?user=9DUJUoQAAAAJ&hl=en" target="_blank" title="Google Scholar")
+                        i.fas.fa-quote-right(aria-hidden="true")
+                        span!= ` ${site.data.scholar.citations} citations · h-index ${site.data.scholar.hindex} · i10-index ${site.data.scholar.i10index}`
         .home-body
             each article in page.posts.data
                 if article.academia
