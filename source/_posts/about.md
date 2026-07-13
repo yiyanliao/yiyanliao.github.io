@@ -18,20 +18,20 @@ academia: true
 ## Selected Papers
 
 <div class="pub">
-  <div class="pub-thumb"><img src="https://raw.githubusercontent.com/yiyanliao/yiyanliao.github.io/main/themes/Academia/source/img/molexar_architecture.png" alt="Molexar"></div>
+  <div class="pub-thumb"><img src="/img/molexar_architecture.png" alt="Molexar"></div>
   <div class="pub-body">
     <a class="pub-title" href="https://arxiv.org/abs/2606.25865" target="_blank">Molexar: A Unified Multimodal Molecular Foundation Model for Drug Design</a>
     <p class="pub-authors">Haoyu Lin<sup>†</sup>, <strong>Yiyan Liao</strong><sup>†</sup>, Jinmei Pan, Xinliao Ling, Luhua Lai<sup>*</sup>, Jianfeng Pei<sup>*</sup></p>
     <p class="pub-venue">arXiv, 2026</p>
     <div class="pub-links">
       <a href="https://arxiv.org/abs/2606.25865" target="_blank">Paper</a>
-      <a href="https://raw.githubusercontent.com/yiyanliao/yiyanliao.github.io/main/themes/Academia/source/pdf/Molexar.pdf" target="_blank">PDF</a>
+      <a href="/pdf/Molexar.pdf" target="_blank">PDF</a>
     </div>
   </div>
 </div>
 
 <div class="pub">
-  <div class="pub-thumb"><img src="https://raw.githubusercontent.com/yiyanliao/yiyanliao.github.io/main/themes/Academia/source/img/MGTbind_TOC.png" alt="MGTbind"></div>
+  <div class="pub-thumb"><img src="/img/MGTbind_TOC.png" alt="MGTbind"></div>
   <div class="pub-body">
     <a class="pub-title" href="https://doi.org/10.1093/nar/gkaf1075" target="_blank">MGTbind: a comprehensive database of molecular glue ternary interactome</a>
     <p class="pub-authors author-toggle-container">
@@ -42,20 +42,20 @@ academia: true
     <p class="pub-venue">Nucleic Acids Research, 2025</p>
     <div class="pub-links">
       <a href="https://doi.org/10.1093/nar/gkaf1075" target="_blank">Paper</a>
-      <a href="https://raw.githubusercontent.com/yiyanliao/yiyanliao.github.io/main/themes/Academia/source/pdf/MGTbind.pdf" target="_blank">PDF</a>
+      <a href="/pdf/MGTbind.pdf" target="_blank">PDF</a>
     </div>
   </div>
 </div>
 
 <div class="pub">
-  <div class="pub-thumb"><img src="https://raw.githubusercontent.com/yiyanliao/yiyanliao.github.io/main/themes/Academia/source/img/MGBench.png" alt="Benchmarking Cofolding"></div>
+  <div class="pub-thumb"><img src="/img/MGBench.png" alt="Benchmarking Cofolding"></div>
   <div class="pub-body">
     <a class="pub-title" href="https://doi.org/10.1021/acs.jcim.5c01860" target="_blank">Benchmarking Cofolding Methods for Molecular Glue Ternary Structure Prediction</a>
     <p class="pub-authors"><strong>Yiyan Liao</strong><sup>†</sup>, Jintao Zhu<sup>†*</sup>, Juan Xie, Luhua Lai<sup>*</sup>, Jianfeng Pei<sup>*</sup></p>
     <p class="pub-venue">Journal of Chemical Information and Modeling, 2025</p>
     <div class="pub-links">
       <a href="https://doi.org/10.1021/acs.jcim.5c01860" target="_blank">Paper</a>
-      <a href="https://raw.githubusercontent.com/yiyanliao/yiyanliao.github.io/main/themes/Academia/source/pdf/benchmarking-cofolding-methods-for-molecular-glue-ternary-structure-prediction.pdf" target="_blank">PDF</a>
+      <a href="/pdf/benchmarking-cofolding-methods-for-molecular-glue-ternary-structure-prediction.pdf" target="_blank">PDF</a>
     </div>
   </div>
 </div>
