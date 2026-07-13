@@ -178,7 +178,32 @@ grow-underline($color)
     transform translateY(-1px)
     box-shadow 0 5px 14px rgba(192,122,14,0.32)
 
+.theme-toggle
+  margin-left 1.8rem
+  width 3.4rem
+  height 3.4rem
+  padding 0
+  display inline-flex
+  align-items center
+  justify-content center
+  border 1.5px solid $separator
+  border-radius 50%
+  background transparent
+  color $accent-text
+  font-size 1.5rem
+  cursor pointer
+  transition color 0.2s $ease, border-color 0.2s $ease, transform 0.2s $ease
+  &:hover
+    color $accent
+    border-color $accent-dark
+    transform translateY(-1px)
+
 @media (max-width: 40em)
+  .theme-toggle
+    margin-left 1rem
+    width 3rem
+    height 3rem
+    font-size 1.35rem
   .cv-button
     margin-left 1.2rem
     padding 0.4rem 1rem
@@ -667,3 +692,142 @@ article
 ::-webkit-scrollbar-thumb
   background-color rgba(128,128,128,0.4)
   border-radius 6px
+
+// ============ DARK MODE ============
+// Runtime-switched via [data-theme="dark"] on <html> (set by the head script /
+// toggle button). Stylus vars are compile-time, so overrides use literal colors.
+$d-bg = #131419
+$d-panel = #1c1e26
+$d-text = #c9cbd3
+$d-head = #f2f3f5
+$d-muted = #969aa3
+$d-border = #2b2e37
+$d-link = #e8b44a
+
+html[data-theme="dark"]
+  body
+    background-color $d-bg
+    background-image radial-gradient(1100px 480px at 50% -240px, rgba(249,190,0,0.07), rgba(19,20,25,0) 70%)
+    color $d-text
+  ::selection
+    background rgba(249,190,0,0.30)
+    color #fff
+
+  // header
+  #page_header
+    background rgba(19,20,25,0.85)
+    border-bottom-color $d-border
+  #blog_name a
+    color $d-link
+  .menus_items li a
+    color $d-link
+    &::before
+      background $d-link
+  .cv-button
+    border-color $d-link
+    color $d-link
+    &:hover
+      background $d-link
+      color $d-bg
+      box-shadow 0 5px 14px rgba(232,180,74,0.28)
+  .theme-toggle
+    border-color $d-border
+    color $d-link
+    &:hover
+      color $accent
+      border-color $d-link
+
+  // hero
+  .hero-name
+    color $d-head
+  .hero-tagline
+    color $d-muted
+  .hero-bio
+    color $d-text
+    a
+      color $d-link
+  .hero-social
+    color $d-muted
+    &:hover
+      color $d-link
+  .hero-scholar
+    color $d-muted
+    &:hover
+      color $d-link
+  .hero-photo img
+    border-color $d-bg
+    box-shadow 0 0 0 1.5px rgba(232,180,74,0.35), 0 14px 34px rgba(0,0,0,0.5)
+
+  // article body
+  article
+    h1, h2, h3, h4, .section-title
+      color $d-head
+    strong, b
+      color $d-head
+    p, li
+      color $d-text
+    a
+      color $d-link
+    code
+      background $d-panel
+      color $d-text
+    .highlight
+      background $d-panel
+    hr
+      border-top-color $d-border
+  .page-title
+    color $d-head
+  blockquote
+    color $d-muted
+
+  // publications
+  .pub
+    border-bottom-color $d-border
+  .pub-title
+    color $d-head
+  .pub-authors
+    color $d-muted
+    strong
+      color $d-head
+  .pub-venue
+    color $d-text
+  .pub-thumb img
+    border-color $d-border
+    background $d-panel
+  .pub-links a
+    color $d-text
+    &:hover
+      color $d-bg
+  .toggle-authors
+    color $d-link
+  .cite-btn
+    color $d-text
+    &:hover
+      color $d-bg
+  .cite-box pre
+    background $d-panel
+    border-color $d-border
+    color $d-text
+  .cite-copy
+    background rgba(28,30,38,0.92)
+    color $d-link
+    &:hover
+      color $d-bg
+
+  // footer
+  #page_footer
+    background #17181d
+    border-top-color $d-border
+    color $d-muted
+    a
+      color $d-muted
+      &:hover
+        color $accent
+  .footer_wrap
+    color $d-muted
+
+  // scrollbar
+  ::-webkit-scrollbar
+    background-color $d-bg
+  ::-webkit-scrollbar-thumb
+    background-color rgba(180,182,190,0.28)

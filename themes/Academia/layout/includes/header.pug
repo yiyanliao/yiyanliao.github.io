@@ -12,3 +12,5 @@
                         a.site-page=' ' + trim(label.split('||')[0])
         if theme.cv_dl.enable
             a.cv-button(href=url_for(theme.cv_dl.dir) target="_blank") CV as PDF
+        button.theme-toggle(type="button" aria-label="Toggle dark mode" title="Toggle dark mode")
+            i.fas.fa-moon(aria-hidden="true")

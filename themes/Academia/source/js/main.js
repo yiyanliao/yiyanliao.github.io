@@ -76,6 +76,20 @@ $(function () {
         }
     });
 
+    // dark-mode toggle. The <head> script has already set data-theme; here we
+    // just sync the icon and flip + persist on click.
+    function syncThemeIcon() {
+        var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+        $('.theme-toggle i').attr('class', dark ? 'fas fa-sun' : 'fas fa-moon');
+    }
+    syncThemeIcon();
+    $(document).on('click', '.theme-toggle', function () {
+        var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+        syncThemeIcon();
+    });
+
     // publication author expand/collapse + BibTeX "Cite" toggle & copy.
     // Delegated on document so they survive pjax page swaps.
     $(document).on('click', '.toggle-authors', function () {
