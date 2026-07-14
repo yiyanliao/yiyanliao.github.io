@@ -33,7 +33,9 @@ html(lang=config.language)
         meta(name="twitter:image" content=ogImage)
         !=favicon_tag(config.favicon || theme.favicon || '/favicon.ico')
         each item in theme.CDN_USE.css
-            link(rel='stylesheet', href=url_for(item))
+            - var cssHref = url_for(item)
+            - if (item.indexOf('//') === -1 && theme.asset_version) cssHref += (cssHref.indexOf('?') === -1 ? '?' : '&') + 'v=' + theme.asset_version
+            link(rel='stylesheet', href=cssHref)
         if is_home()
             script(type="application/ld+json").
                 {
@@ -63,4 +65,6 @@ html(lang=config.language)
         footer#page_footer
             include ./footer.pug
         each item in theme.CDN_USE.js
-            script(src=url_for(item))
+            - var jsSrc = url_for(item)
+            - if (item.indexOf('//') === -1 && theme.asset_version) jsSrc += (jsSrc.indexOf('?') === -1 ? '?' : '&') + 'v=' + theme.asset_version
+            script(src=jsSrc)
