@@ -100,9 +100,11 @@ grow-underline($color)
 #page_header
   position sticky
   top 0
-  background rgba(250,248,243,0.85)
-  backdrop-filter saturate(180%) blur(10px)
-  border-bottom 1px solid $separator
+  background rgba(250,248,243,0.72)
+  backdrop-filter saturate(180%) blur(14px)
+  -webkit-backdrop-filter saturate(180%) blur(14px)
+  border-bottom 1px solid rgba(60,40,0,0.06)
+  box-shadow inset 0 1px 0 rgba(255,255,255,0.6), 0 6px 20px -14px rgba(60,40,0,0.28)
   z-index 50
   -webkit-animation intro 0.3s both
   animation intro 0.3s both
@@ -300,8 +302,8 @@ grow-underline($color)
   font-family $serif
   font-size 4.9rem
   font-weight 600
-  letter-spacing -0.01em
-  line-height 1.06
+  letter-spacing -0.02em
+  line-height 1.04
   text-wrap balance
   color $ink
 
@@ -377,7 +379,8 @@ article
     color $ink
     font-weight 600
     font-size 2.5rem
-    letter-spacing -0.005em
+    letter-spacing -0.01em
+    line-height 1.2
     text-transform none
     margin 3.8rem 0 1.4rem
     padding-bottom 0.7rem
@@ -389,18 +392,23 @@ article
     font-family $serif
     font-size 3.4rem
     font-weight 600
+    letter-spacing -0.012em
+    line-height 1.15
     color $ink
     margin 2rem 0 1rem
   h3
     font-family $serif
     font-size 2.15rem
     font-weight 600
+    letter-spacing -0.006em
+    line-height 1.3
     color $ink
     margin 2rem 0 0.6rem
   h4
     font-family $serif
     font-size 1.85rem
     font-weight 600
+    letter-spacing -0.003em
     color $ink
     margin 1.6rem 0 0.5rem
   p, li
@@ -451,7 +459,8 @@ article
   font-family $serif
   font-size 3.9rem
   font-weight 600
-  letter-spacing -0.005em
+  letter-spacing -0.015em
+  line-height 1.08
   color $ink
   margin 3.2rem 0 0.4rem
   padding-bottom 0.6rem
@@ -503,6 +512,7 @@ article
   font-family $serif
   font-size 2.05rem
   font-weight 600
+  letter-spacing -0.005em
   line-height 1.35
   color $ink
   text-decoration none
@@ -556,7 +566,7 @@ article
     font-size 1.4rem
     font-weight 700
     text-decoration none
-    transition background-color 0.2s, color 0.2s
+    transition background-color 0.2s, color 0.2s, transform 0.12s ease
     &:hover
       background-color $accent
       color $ink
@@ -572,7 +582,7 @@ article
   font-weight 700
   font-family $font-family
   cursor pointer
-  transition background-color 0.2s, color 0.2s
+  transition background-color 0.2s, color 0.2s, transform 0.12s ease
   &:hover
     background-color $accent
     color $ink
@@ -610,10 +620,20 @@ article
   font-weight 700
   font-family $font-family
   cursor pointer
-  transition background-color 0.2s, color 0.2s
+  transition background-color 0.2s, color 0.2s, transform 0.12s ease
   &:hover
     background $accent
     color $ink
+
+// press-state feedback (Apple: respond on pointer-down, instantly & physically)
+.cv-button,
+.pub-links a,
+.cite-btn,
+.cite-copy,
+.theme-toggle,
+.hero-social
+  &:active
+    transform scale(0.95)
 
 
 // ============ FOOTER ============
@@ -709,8 +729,9 @@ html[data-theme="dark"]
 
   // header
   #page_header
-    background rgba(19,20,25,0.85)
-    border-bottom-color $d-border
+    background rgba(19,20,25,0.68)
+    border-bottom-color rgba(255,255,255,0.06)
+    box-shadow inset 0 1px 0 rgba(255,255,255,0.06), 0 6px 22px -14px rgba(0,0,0,0.7)
   #blog_name a
     color $d-link
   .menus_items li a
@@ -825,3 +846,24 @@ html[data-theme="dark"]
     background-color $d-bg
   ::-webkit-scrollbar-thumb
     background-color rgba(180,182,190,0.28)
+
+// ============ ACCESSIBILITY: MATERIALS ============
+// Users who ask for less transparency get a solid header instead of frosted glass.
+@media (prefers-reduced-transparency: reduce)
+  #page_header
+    background $paper
+    backdrop-filter none
+    -webkit-backdrop-filter none
+  html[data-theme="dark"] #page_header
+    background $d-bg
+
+// Higher-contrast preference: solid header with a clearly defined edge.
+@media (prefers-contrast: more)
+  #page_header
+    background $paper
+    backdrop-filter none
+    -webkit-backdrop-filter none
+    border-bottom 1px solid rgba(60,40,0,0.45)
+  html[data-theme="dark"] #page_header
+    background $d-bg
+    border-bottom-color rgba(255,255,255,0.45)
