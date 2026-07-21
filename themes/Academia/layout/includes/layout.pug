@@ -55,7 +55,23 @@ html(lang=config.language)
                   ]
                 }
         if theme.cloudflare_token
-            script(defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon=`{"token": "${theme.cloudflare_token}"}`)
+            //- Analytics with a self-exclusion switch.
+            //- Visit /?noanalytics=1 once per browser to stop counting your own
+            //- visits; /?noanalytics=off re-enables counting.
+            script.
+                (function () {
+                  try {
+                    var v = new URLSearchParams(location.search).get('noanalytics');
+                    if (v === 'off') localStorage.removeItem('noanalytics');
+                    else if (v !== null) localStorage.setItem('noanalytics', '1');
+                    if (localStorage.getItem('noanalytics') === '1') return;
+                  } catch (e) {}
+                  var s = document.createElement('script');
+                  s.defer = true;
+                  s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+                  s.setAttribute('data-cf-beacon', '{"token": "#{theme.cloudflare_token}"}');
+                  document.head.appendChild(s);
+                })();
     body
         header#page_header
             include ./header.pug
