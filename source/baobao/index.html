@@ -130,7 +130,8 @@
     send.classList.toggle("on", box.value.trim().length>0);
   });
   box.addEventListener("keydown", (e)=>{
-    if(e.key==="Enter" && !e.shiftKey){ e.preventDefault(); doSend(); }
+    // 输入法组字中（IME composing）时的回车是"上屏/确认"，不能当发送
+    if(e.key==="Enter" && !e.shiftKey && !e.isComposing && e.keyCode!==229){ e.preventDefault(); doSend(); }
   });
   send.addEventListener("click", doSend);
 
