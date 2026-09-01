@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>· ·</title>
+<style>
+  :root{ --bg:#f2f2f4; --card:#fff; --ink:#1d1d1f; --muted:#8a8d92; --line:#e2e2e2; --accent:#07c160; --danger:#e0533d; }
+  @media (prefers-color-scheme: dark){ :root{ --bg:#121316; --card:#1c1e22; --ink:#e8e9ec; --muted:#8a8d92; --line:#2a2c31; --accent:#3eb575; --danger:#e0715f; } }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft Yahei",sans-serif;font-size:16px;line-height:1.5}
+  header{padding:calc(env(safe-area-inset-top) + 16px) 16px 12px;font-weight:600;font-size:17px;text-align:center;border-bottom:1px solid var(--line);background:var(--card)}
+  header small{display:block;color:var(--muted);font-weight:400;font-size:12px;margin-top:2px}
+  main{max-width:620px;margin:0 auto;padding:14px}
+  .add{display:flex;gap:8px;margin-bottom:14px}
+  .add textarea{flex:1;border:1px solid var(--line);border-radius:10px;padding:10px;font:inherit;background:var(--card);color:var(--ink);resize:none;height:44px}
+  .add button, .toolbar button{border:none;border-radius:10px;background:var(--accent);color:#fff;font-weight:600;padding:0 16px;cursor:pointer}
+  .toolbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;color:var(--muted);font-size:13px}
+  .toolbar button{background:transparent;color:var(--muted);border:1px solid var(--line);padding:6px 12px;font-weight:500}
+  .item{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:10px;display:flex;gap:10px;align-items:flex-start}
+  .item .t{flex:1;white-space:pre-wrap;word-break:break-word}
+  .item .d{font-size:11px;color:var(--muted);margin-top:4px}
+  .item .del{flex:0 0 auto;border:none;background:transparent;color:var(--danger);cursor:pointer;font-size:14px;padding:2px 6px}
+  .empty{color:var(--muted);text-align:center;padding:40px 0}
+  #gate{position:fixed;inset:0;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:24px;z-index:9}
+  #gate input{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;padding:12px 14px;font-size:16px;width:min(280px,80vw);text-align:center}
+  #gate button{border:none;border-radius:10px;padding:11px 22px;background:var(--accent);color:#fff;font-weight:600;cursor:pointer}
+  #gate .err{color:var(--danger);font-size:13px;min-height:16px}
+  .hidden{display:none!important}
+</style>
+</head>
+<body>
+  <header>记忆后台<small>一岩从聊天里学到的新事实 · 仅你可见</small></header>
+  <main>
+    <div class="add">
+      <textarea id="addbox" placeholder="手动添加一条记忆…"></textarea>
+      <button id="addbtn">添加</button>
+    </div>
+    <div class="toolbar">
+      <span id="count">—</span>
+      <span><button id="refresh">刷新</button> <button id="clearall" style="color:var(--danger);border-color:var(--danger)">清空</button></span>
+    </div>
+    <div id="list"></div>
+  </main>
+
+  <div id="gate">
+    <p style="color:var(--muted);margin:0">管理员暗号</p>
+    <input id="pp" type="password" placeholder="暗号">
+    <div class="err" id="gerr"></div>
+    <button id="go">进入</button>
+  </div>
+
+<script>
+  const WORKER_URL = "https://baobao-chat.yiyanliao.workers.dev/admin";
+  const $=(s)=>document.querySelector(s);
+  const KEY="bb_admin_pp";
+  let pass = localStorage.getItem(KEY) || "";
+
+  async function call(payload){
+    const r = await fetch(WORKER_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({...payload, adminPass:pass})});
+    if(r.status===401){ throw {code:401}; }
+    if(!r.ok) throw {code:r.status};
+    return r.json();
+  }
+  function fmt(ts){ try{ return new Date(ts).toLocaleString('zh-CN',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'}); }catch{ return ""; } }
+  function render(mems){
+    $("#count").textContent = mems.length + " 条";
+    const list=$("#list");
+    if(!mems.length){ list.innerHTML='<div class="empty">还没有学到新记忆</div>'; return; }
+    list.innerHTML="";
+    for(const m of mems){
+      const d=document.createElement("div"); d.className="item";
+      const t=document.createElement("div"); t.className="t";
+      t.innerHTML = "<div>"+m.text.replace(/</g,"&lt;")+"</div><div class='d'>"+fmt(m.ts)+"</div>";
+      const del=document.createElement("button"); del.className="del"; del.textContent="删";
+      del.onclick=async()=>{ if(!confirm("删除这条记忆？"))return; render((await call({action:"delete", id:m.id})).memories); };
+      d.appendChild(t); d.appendChild(del); list.appendChild(d);
+    }
+  }
+  async function load(){
+    try{ render((await call({})).memories); }
+    catch(e){ if(e.code===401){ openGate("暗号不对哦"); } else { $("#list").innerHTML='<div class="empty">加载失败，稍后再试</div>'; } }
+  }
+  $("#addbtn").onclick=async()=>{
+    const v=$("#addbox").value.trim(); if(!v)return;
+    try{ render((await call({action:"add", text:v})).memories); $("#addbox").value=""; }catch(e){ if(e.code===401) openGate("暗号不对哦"); }
+  };
+  $("#refresh").onclick=load;
+  $("#clearall").onclick=async()=>{ if(!confirm("清空全部学到的记忆？不可恢复"))return; try{ render((await call({action:"clear"})).memories); }catch(e){ if(e.code===401) openGate("暗号不对哦"); } };
+
+  function openGate(msg){ $("#gerr").textContent=msg||""; $("#gate").classList.remove("hidden"); $("#pp").focus(); }
+  $("#go").onclick=async()=>{
+    const v=$("#pp").value.trim(); if(!v){ $("#gerr").textContent="要输暗号"; return; }
+    pass=v;
+    try{ const d=await call({}); localStorage.setItem(KEY,v); $("#gate").classList.add("hidden"); render(d.memories); }
+    catch(e){ $("#gerr").textContent = e.code===401 ? "暗号不对哦" : "网络不太好"; }
+  };
+  $("#pp").addEventListener("keydown",(e)=>{ if(e.key==="Enter") $("#go").click(); });
+
+  if(pass) load(); else openGate("");
+</script>
+</body>
+</html>
