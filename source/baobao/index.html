@@ -28,7 +28,10 @@
     font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft Yahei","Segoe UI",Roboto,sans-serif;
     display:flex;flex-direction:column;overscroll-behavior:none}
   header{flex:0 0 auto;background:var(--bar);border-bottom:1px solid var(--bar-line);
-    text-align:center;padding:calc(env(safe-area-inset-top) + 12px) 12px 12px;font-size:16px;font-weight:600}
+    position:relative;text-align:center;padding:calc(env(safe-area-inset-top) + 12px) 12px 12px;font-size:16px;font-weight:600}
+  #reset{position:absolute;right:10px;bottom:8px;border:none;background:transparent;color:var(--muted);
+    font-size:22px;line-height:1;padding:4px 8px;cursor:pointer;border-radius:8px}
+  #reset:active{background:var(--bar-line)}
   #log{flex:1 1 auto;overflow-y:auto;padding:14px 12px 6px;-webkit-overflow-scrolling:touch}
   .row{display:flex;align-items:flex-end;gap:8px;margin:10px 0}
   .row.me{flex-direction:row-reverse}
@@ -66,7 +69,7 @@
 </style>
 </head>
 <body>
-  <header id="title">一岩</header>
+  <header><span id="title">一岩</span><button id="reset" title="开始新聊天" aria-label="开始新聊天">＋</button></header>
   <div id="log"></div>
   <footer>
     <textarea id="box" rows="1" placeholder="发消息…" autocomplete="off"></textarea>
@@ -175,6 +178,13 @@
     pass=v; localStorage.setItem(KEY_PP, v); gateError(""); $("#gate").classList.add("hidden"); box.focus();
   });
   $("#pp").addEventListener("keydown",(e)=>{ if(e.key==="Enter") $("#go").click(); });
+
+  // 开始新聊天：清空当前对话（保留暗号）
+  $("#reset").addEventListener("click", ()=>{
+    if(!confirm("开始新的聊天？会清空当前对话哦")) return;
+    history=[]; saveHist(); log.innerHTML=""; box.focus();
+  });
+
   if(!pass) openGate();
 </script>
 </body>
