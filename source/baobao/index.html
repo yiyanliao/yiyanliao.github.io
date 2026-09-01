@@ -173,10 +173,22 @@
   // ---- passphrase gate ----
   function openGate(){ $("#gate").classList.remove("hidden"); $("#pp").focus(); }
   function gateError(m){ $("#gerr").textContent=m||""; }
-  $("#go").addEventListener("click", ()=>{
+  let checking=false;
+  async function tryEnter(){
     const v=$("#pp").value.trim(); if(!v){ gateError("要输暗号呀"); return; }
-    pass=v; localStorage.setItem(KEY_PP, v); gateError(""); $("#gate").classList.add("hidden"); box.focus();
-  });
+    if(checking) return; checking=true; gateError("验证中…"); $("#go").disabled=true;
+    try{
+      const r=await fetch(WORKER_URL,{method:"POST",headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({verify:true, passphrase:v})});
+      if(r.status===200){
+        pass=v; localStorage.setItem(KEY_PP, v); gateError("");
+        $("#gate").classList.add("hidden"); box.focus();
+      } else if(r.status===401){ gateError("暗号不对哦 🥺"); }
+      else { gateError("网络不太好，再试一次"); }
+    }catch{ gateError("网络不太好，再试一次"); }
+    checking=false; $("#go").disabled=false;
+  }
+  $("#go").addEventListener("click", tryEnter);
   $("#pp").addEventListener("keydown",(e)=>{ if(e.key==="Enter") $("#go").click(); });
 
   // 开始新聊天：清空当前对话（保留暗号）
