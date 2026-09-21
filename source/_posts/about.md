@@ -6,6 +6,7 @@ academia: true
 ---
 
 ## Recent News
+- 🎉🆕 [Sep 2026] I was awarded National Scholarship for Undergraduate Students for 2025-2026 school year!
 - [Jun 2026] Our paper [Molexar: A Unified Multimodal Molecular Foundation Model for Drug Design](https://arxiv.org/abs/2606.25865) is now on arXiv!
 - [Apr 2026] I was awarded a 2026 [Caltech Summer Undergraduate Research Fellowships (SURF)](https://sfp.caltech.edu/undergraduate-research/programs/surf) award, hosted by [Prof. Anima Anandkumar](https://www.linkedin.com/in/anima-anandkumar/)! See you in Pasadena!
 
