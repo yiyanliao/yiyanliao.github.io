@@ -119,6 +119,7 @@ academia: true
 
 ### Scholarships & Honors
 - **National Scholarship for Undergraduate Students** (2025–2026), *Sep 2026*
+- **Peking University Merit Student** (2025–2026), *Sep 2026*
 - **Outstanding Teaching Assistant Award**, School of Life Sciences, Peking University, *Jun 2026*
 - **87 Excellent Research Project Scholarship**, School of Life Sciences, Peking University
   First Prize — *Computational Landscape and Structure Prediction of Molecular Glue Ternary Complexes*, *May 2026*
