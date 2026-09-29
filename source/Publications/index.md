@@ -9,7 +9,7 @@ date: 2025-05-06 17:36:01
   <div class="pub-thumb"><img src="/img/guiding_diffusion.png" alt="Guiding Denoising Diffusion"></div>
   <div class="pub-body">
     <a class="pub-title" href="https://openreview.net/forum?id=8SIWoG4In4" target="_blank">Guiding Denoising Diffusion Models for Structure-based Drug Design via Machine-learned Interatomic Potentials</a>
-    <p class="pub-authors"><strong>Yiyan Liao</strong>, Amin Tavakoli, Yu Zhang, Anima Anandkumar</p>
+    <p class="pub-authors"><strong>Yiyan Liao</strong>, Amin Tavakoli, Yu Zhang, Anima Anandkumar<sup>*</sup></p>
     <p class="pub-venue">The 2nd Workshop on Simulations for Biology and Chemistry, 2026</p>
     <div class="pub-links">
       <a href="https://openreview.net/forum?id=8SIWoG4In4" target="_blank">Paper</a>
