@@ -3,7 +3,7 @@ title: Publications
 date: 2025-05-06 17:36:01
 ---
 
-<h2 class="section-title">Computer-Aided Drug Design (CADD)</h2>
+<h2 class="section-title">Computer-Aided Drug Design (CADD) <span class="pub-legend"><sup>†</sup>Equal contribution. <sup>*</sup>Corresponding author.</span></h2>
 
 <div class="pub">
   <div class="pub-thumb"><img src="/img/guiding_diffusion.png" alt="Guiding Denoising Diffusion"></div>
@@ -102,7 +102,7 @@ date: 2025-05-06 17:36:01
   </div>
 </div>
 
-<h2 class="section-title">Large Language Models (LLMs)</h2>
+<h2 class="section-title">Large Language Models (LLMs) <span class="pub-legend"><sup>†</sup>Equal contribution. <sup>*</sup>Corresponding author.</span></h2>
 
 <div class="pub">
   <div class="pub-thumb"><img src="/img/ScholarSearch.png" alt="ScholarSearch"></div>

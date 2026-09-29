@@ -16,7 +16,7 @@ academia: true
 - Structural geometry deep learning & modeling
 - Reasoning & foundation biological large language models (LLMs)
 
-## Selected Papers
+## Selected Papers <span class="pub-legend"><sup>†</sup>Equal contribution. <sup>*</sup>Corresponding author.</span>
 
 <div class="pub">
   <div class="pub-thumb"><img src="/img/molexar_architecture.png" alt="Molexar"></div>
