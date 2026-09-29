@@ -6,6 +6,27 @@ date: 2025-05-06 17:36:01
 <h2 class="section-title">Computer-Aided Drug Design (CADD)</h2>
 
 <div class="pub">
+  <div class="pub-thumb"><img src="/img/guiding_diffusion.png" alt="Guiding Denoising Diffusion"></div>
+  <div class="pub-body">
+    <a class="pub-title" href="https://openreview.net/forum?id=8SIWoG4In4" target="_blank">Guiding Denoising Diffusion Models for Structure-based Drug Design via Machine-learned Interatomic Potentials</a>
+    <p class="pub-authors"><strong>Yiyan Liao</strong>, Amin Tavakoli, Yu Zhang, Anima Anandkumar</p>
+    <p class="pub-venue">The 2nd Workshop on Simulations for Biology and Chemistry, 2026</p>
+    <div class="pub-links">
+      <a href="https://openreview.net/forum?id=8SIWoG4In4" target="_blank">Paper</a>
+      <button class="cite-btn" type="button">Cite</button>
+    </div>
+    <div class="cite-box" hidden><button class="cite-copy" type="button" data-label="Copy">Copy</button><pre>@inproceedings{
+liao2026guiding,
+title={Guiding Denoising Diffusion Models for Structure-based Drug Design via Machine-learned Interatomic Potentials},
+author={Yiyan Liao and Mohammadamin Tavakoli and Yu Zhang and Anima Anandkumar},
+booktitle={The 2nd Workshop on Simulations for Biology and Chemistry},
+year={2026},
+url={https://openreview.net/forum?id=8SIWoG4In4}
+}</pre></div>
+  </div>
+</div>
+
+<div class="pub">
   <div class="pub-thumb"><img src="/img/molexar_architecture.png" alt="Molexar"></div>
   <div class="pub-body">
     <a class="pub-title" href="https://arxiv.org/abs/2606.25865" target="_blank">Molexar: A Unified Multimodal Molecular Foundation Model for Drug Design</a>
