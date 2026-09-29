@@ -15,13 +15,12 @@ date: 2025-05-06 17:36:01
       <a href="https://openreview.net/forum?id=8SIWoG4In4" target="_blank">Paper</a>
       <button class="cite-btn" type="button">Cite</button>
     </div>
-    <div class="cite-box" hidden><button class="cite-copy" type="button" data-label="Copy">Copy</button><pre>@inproceedings{
-liao2026guiding,
-title={Guiding Denoising Diffusion Models for Structure-based Drug Design via Machine-learned Interatomic Potentials},
-author={Yiyan Liao and Mohammadamin Tavakoli and Yu Zhang and Anima Anandkumar},
-booktitle={The 2nd Workshop on Simulations for Biology and Chemistry},
-year={2026},
-url={https://openreview.net/forum?id=8SIWoG4In4}
+    <div class="cite-box" hidden><button class="cite-copy" type="button" data-label="Copy">Copy</button><pre>@inproceedings{liao2026guiding,
+  title={Guiding Denoising Diffusion Models for Structure-based Drug Design via Machine-learned Interatomic Potentials},
+  author={Liao, Yiyan and Tavakoli, Mohammadamin and Zhang, Yu and Anandkumar, Anima},
+  booktitle={The 2nd Workshop on Simulations for Biology and Chemistry},
+  year={2026},
+  url={https://openreview.net/forum?id=8SIWoG4In4}
 }</pre></div>
   </div>
 </div>
