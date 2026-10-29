@@ -118,6 +118,7 @@ academia: true
   National Team Member, *Aug 2022*
 
 ### Scholarships & Honors
+- **Best Poster Presenter** (10 out of 55 presenters), 13th UHPB Annual Symposium, *Oct 2026*
 - **National Scholarship for Undergraduate Students** (2025–2026), *Sep 2026*
 - **Peking University Merit Student** (2025–2026), *Sep 2026*
 - **Outstanding Teaching Assistant Award**, School of Life Sciences, Peking University, *Jun 2026*
