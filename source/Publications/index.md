@@ -6,6 +6,29 @@ date: 2025-05-06 17:36:01
 <h2 class="section-title">Computer-Aided Drug Design (CADD) <span class="pub-legend"><sup>†</sup>Equal contribution. <sup>*</sup>Corresponding author.</span></h2>
 
 <div class="pub">
+  <div class="pub-thumb"><img src="/img/DiffTernary.png" alt="DiffTernary"></div>
+  <div class="pub-body">
+    <a class="pub-title" href="https://www.biorxiv.org/content/10.64898/2026.11.09.765352v1" target="_blank">DiffTernary: a Diffusion Model for Molecular Glue Ternary Complex Docking</a>
+    <p class="pub-authors"><strong>Yiyan Liao</strong>, Letian Lin, Jintao Zhu<sup>*</sup>, Luhua Lai<sup>*</sup>, Jianfeng Pei<sup>*</sup></p>
+    <p class="pub-venue">bioRxiv, 2026</p>
+    <div class="pub-links">
+      <a href="https://www.biorxiv.org/content/10.64898/2026.11.09.765352v1" target="_blank">Paper</a>
+      <a href="/pdf/DiffTernary_bioRxiv.pdf" target="_blank">PDF</a>
+      <button class="cite-btn" type="button">Cite</button>
+    </div>
+    <div class="cite-box" hidden><button class="cite-copy" type="button" data-label="Copy">Copy</button><pre>@misc{liao2026diffternary,
+  title={DiffTernary: a Diffusion Model for Molecular Glue Ternary Complex Docking},
+  author={Liao, Yiyan and Lin, Letian and Zhu, Jintao and Lai, Luhua and Pei, Jianfeng},
+  year={2026},
+  eprint={2026.11.09.765352},
+  archivePrefix={bioRxiv},
+  doi={10.64898/2026.11.09.765352},
+  url={https://www.biorxiv.org/content/10.64898/2026.11.09.765352v1}
+}</pre></div>
+  </div>
+</div>
+
+<div class="pub">
   <div class="pub-thumb"><img src="/img/guiding_diffusion.png" alt="Guiding Denoising Diffusion"></div>
   <div class="pub-body">
     <a class="pub-title" href="https://arxiv.org/abs/2610.33315v1" target="_blank">Guiding Denoising Diffusion Models for Structure-based Drug Design via Machine-learned Interatomic Potentials</a>
